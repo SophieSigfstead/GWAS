@@ -33,11 +33,6 @@ def main(model_path):
     return
 
 if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        print("Usage: python run_enformer.pycd")
-        sys.exit(1)
-
-    model_path = sys.argv[1]
     main(model_path)
 
 
