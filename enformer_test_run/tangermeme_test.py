@@ -27,7 +27,6 @@ def main():
 
     one_hot = seq_indices_to_one_hot(seq)
 
-
     X_attr = deep_lift_shap(model, one_hot, target='human', random_state=0)
 
     print(X_attr.shape)
