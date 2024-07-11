@@ -11,19 +11,23 @@ def one_hot_encode_dna(sequence):
 
 def main(model_path):
 
+    SEQ_LENGTH = 393_216
+    BATCH_SIZE = 5
+
     enformer_model = hub.load("https://kaggle.com/models/deepmind/enformer/frameworks/TensorFlow2/variations/enformer/versions/1").model
 
-    #infer = model.signatures["serving_default"]
+    dna_sequence = "AGCT" * (SEQ_LENGTH // 4)
 
-    dna_sequence = "AGCT" * 49152
+    if len(dna_sequence) != SEQ_LENGTH:
+        dna_sequence = dna_sequence[:SEQ_LENGTH]
 
     input_data = one_hot_encode_dna(dna_sequence)
-    print("Input data shape: ")
-    print(input_data.shape)
+    print("Input array shape: ", input_data.shape)
 
-    input_tensor = tf.convert_to_tensor([input_data], dtype=tf.float32)
+    input_array = np.array([input_data] * BATCH_SIZE, dtype=np.float32)
+    print("Input array shape: ", input_array.shape)
 
-    predictions = enformer_model(input_tensor)
+    predictions = enformer_model.predict_on_batch(input_array)
     print(predictions)
 
     return
