@@ -11,6 +11,11 @@ def one_hot_encode_dna(sequence):
 def main(model_path):
 
     model = tf.saved_model.load(model_path)
+
+    print("Available signatures:")
+    for key in model.signatures.keys():
+        print(key)
+
     infer = model.signatures["serving_default"]
 
     dna_sequence = "AGCT" * 49152
