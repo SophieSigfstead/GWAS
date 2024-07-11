@@ -6,6 +6,7 @@ def main():
     model = from_pretrained('EleutherAI/enformer-official-rough')
 
     seq = torch.randint(0, 5, (1, 196_608))
+    print(seq.shape)
 
     one_hot = seq_indices_to_one_hot(seq)
 

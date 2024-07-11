@@ -4,6 +4,7 @@ import tangermeme
 from tangermeme.deep_lift_shap import deep_lift_shap
 from matplotlib import pyplot as plt
 from tangermeme.plot import plot_logo
+from tangermeme.utils import random_one_hot
 def main():
 
     model = from_pretrained('EleutherAI/enformer-official-rough')
