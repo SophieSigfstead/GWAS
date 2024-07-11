@@ -21,6 +21,9 @@ def main():
 
     print(one_hot)
 
+    if not torch.all(one_hot.sum(dim=1) == 1):
+        raise ValueError("The one-hot encoding is not correct")
+
     X_attr = deep_lift_shap(model, one_hot, target='human', random_state=0)
 
     print(X_attr.shape)
