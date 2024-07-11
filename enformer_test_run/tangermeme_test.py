@@ -13,7 +13,7 @@ def main():
 
     pred_one_hot = one_hot.permute(0, 2, 1)
 
-    pred = model(one_hot)
+    pred = model(pred_one_hot)
 
     print(one_hot.shape)
 
