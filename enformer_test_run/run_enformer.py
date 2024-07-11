@@ -34,5 +34,6 @@ def main(model_path):
 
 if __name__ == "__main__":
     main(model_path)
+    exit(1)
 
 
