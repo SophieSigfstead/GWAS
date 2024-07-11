@@ -9,7 +9,7 @@ def main():
 
     model = from_pretrained('EleutherAI/enformer-official-rough')
 
-    one_hot = random_one_hot((1, 4, 393216)).type(torch.float32)
+    one_hot = random_one_hot((1, 4, 196608)).type(torch.float32)
 
     pred = model(one_hot)
 
