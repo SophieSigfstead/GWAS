@@ -16,7 +16,7 @@ def process_file_in_chunks(file_path, combined_output_path, filtered_indices, ch
         
         num_rows = alt.shape[0]
 
-        # Create an empty CSV for combined data with headers
+        # create an empty CSV for combined data
         headers = ['alt', 'chr', 'pos', 'ref', 'snp'] + [f'SAD{index}' for index in range(len(filtered_indices))]
         pd.DataFrame(columns=headers).to_csv(combined_output_path, index=False)
 
@@ -37,7 +37,6 @@ def process_file_in_chunks(file_path, combined_output_path, filtered_indices, ch
             # Append chunk to CSV
             df_combined_chunk.to_csv(combined_output_path, mode='a', header=False, index=False)
 
-            # Print chunk processed message
             print(f"Processed chunk {start} to {end} of {num_rows}")
 
             #gb collect
@@ -76,7 +75,7 @@ def main(input_path, output_path, chunk_size=10000):
                 print(f"Saved target data to {target_output_path}")
             break  # Only process the first file for target data
 
-    # Filter the indices of SAD columns to be saved
+    # filter the indices of SAD columns to be saved
     filtered_indices = [i for i, label in enumerate(target_labels) if "DNASE" in label or "ATAC" in label]
 
     with ProcessPoolExecutor() as executor:
