@@ -12,7 +12,7 @@ def main(model_path):
 
     model = tf.saved_model.load(model_path)
 
-    infer = model.signatures["serving_default"]
+    #infer = model.signatures["serving_default"]
 
     dna_sequence = "AGCT" * 49152
 
