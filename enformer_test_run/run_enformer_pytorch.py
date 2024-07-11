@@ -1,5 +1,6 @@
 from enformer_pytorch import from_pretrained, seq_indices_to_one_hot
 import torch
+import sys
 
 def main():
 
