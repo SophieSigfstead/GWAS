@@ -1,5 +1,7 @@
 from enformer_pytorch import from_pretrained, seq_indices_to_one_hot
 import torch
+import tangermeme
+from tangermeme.deep_lift_shap import deep_lift_shap
 
 def main():
 
@@ -13,7 +15,12 @@ def main():
 
     print(pred)
 
+    X_attr = deep_lift_shap(model, seq, target='human', random_state=0)
+
+    print(X_attr.shape)
+
     return
+
 
 if __name__ == "__main__":
     main()
