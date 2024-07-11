@@ -21,7 +21,7 @@ def main(model_path):
 
     input_tensor = tf.convert_to_tensor([input_data], dtype=tf.float32)
 
-    predictions = infer(input_data)
+    predictions = infer(input_tensor)
     print(predictions)
 
     return
