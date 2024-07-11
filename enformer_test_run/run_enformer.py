@@ -1,5 +1,5 @@
 import tensorflow as tf
-import tensorflow_hub as hub
+
 import numpy as np
 def one_hot_encode_dna(sequence):
     mapping = {'A': 0, 'C': 1, 'G': 2, 'T': 3}
