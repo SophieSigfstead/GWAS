@@ -9,7 +9,7 @@ def one_hot_encode_dna(sequence):
         one_hot_encoded[i, mapping[nucleotide]] = 1
     return one_hot_encoded
 
-def main(model_path):
+def main():
 
     SEQ_LENGTH = 393_216
     BATCH_SIZE = 1
@@ -33,7 +33,7 @@ def main(model_path):
     return
 
 if __name__ == "__main__":
-    main(model_path)
+    main()
     sys.exit()
 
 
