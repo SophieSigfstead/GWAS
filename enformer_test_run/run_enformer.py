@@ -12,7 +12,7 @@ def one_hot_encode_dna(sequence):
 def main(model_path):
 
     SEQ_LENGTH = 393_216
-    BATCH_SIZE = 100
+    BATCH_SIZE = 1
 
     enformer_model = hub.load("https://kaggle.com/models/deepmind/enformer/frameworks/TensorFlow2/variations/enformer/versions/1").model
 
@@ -23,6 +23,8 @@ def main(model_path):
 
     input_data = one_hot_encode_dna(dna_sequence)
     print("Input array shape: ", input_data.shape)
+
+    del dna_sequence;
 
     input_array = np.array([input_data] * BATCH_SIZE, dtype=np.float32)
     print("Input array shape: ", input_array.shape)
