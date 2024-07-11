@@ -21,6 +21,8 @@ def main():
 
     print(one_hot)
 
+    print(one_hot.sum(dim=1))
+
     if not torch.all(one_hot.sum(dim=1) == 1):
         raise ValueError("The one-hot encoding is not correct")
 
