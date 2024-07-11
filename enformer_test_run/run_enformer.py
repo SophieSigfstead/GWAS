@@ -11,6 +11,7 @@ def one_hot_encode_dna(sequence):
 def main(model_path):
 
     model = tf.saved_model.load(model_path)
+    infer = model.signatures["serving_default"]
 
     dna_sequence = "AGCT" * 49152
 
@@ -18,7 +19,9 @@ def main(model_path):
     print("Input data shape: ")
     print(input_data.shape)
 
-    predictions = model(input_data)
+    input_tensor = tf.convert_to_tensor([input_data], dtype=tf.float32)
+
+    predictions = infer(input_data)
     print(predictions)
 
     return
