@@ -1,6 +1,7 @@
 import tensorflow as tf
 import sys
 import numpy as np
+import tensorflow_hub as hub
 def one_hot_encode_dna(sequence):
     mapping = {'A': 0, 'C': 1, 'G': 2, 'T': 3}
     one_hot_encoded = np.zeros((len(sequence), 4))
@@ -10,7 +11,7 @@ def one_hot_encode_dna(sequence):
 
 def main(model_path):
 
-    model = tf.saved_model.load(model_path)
+    enformer_model = hub.load("https://kaggle.com/models/deepmind/enformer/frameworks/TensorFlow2/variations/enformer/versions/1").model
 
     #infer = model.signatures["serving_default"]
 
