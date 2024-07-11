@@ -9,9 +9,7 @@ def main():
 
     model = from_pretrained('EleutherAI/enformer-official-rough')
 
-    seq = torch.randint(0, 4, (1, 196_608))
-
-    one_hot = seq_indices_to_one_hot(seq)
+    one_hot = random_one_hot((1, 4, 393216)).type(torch.float32)
 
     pred = model(one_hot)
 
