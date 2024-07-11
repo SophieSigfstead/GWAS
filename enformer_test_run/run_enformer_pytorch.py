@@ -7,7 +7,7 @@ def main():
     model = from_pretrained('EleutherAI/enformer-official-rough')
 
     # creates sequence of numbers (0, 1, 2, 3)
-    seq = torch.randint(0, 4, (1, 393216))
+    seq = torch.randint(0, 4, (1, 196608))
     print(seq.shape)
 
     one_hot = seq_indices_to_one_hot(seq)
