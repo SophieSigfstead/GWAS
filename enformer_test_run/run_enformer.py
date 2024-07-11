@@ -24,7 +24,6 @@ def main():
     input_data = one_hot_encode_dna(dna_sequence)
     print("Input array shape: ", input_data.shape)
 
-
     del dna_sequence
 
     input_array = np.array([input_data] * BATCH_SIZE, dtype=np.float32)
