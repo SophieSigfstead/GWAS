@@ -21,9 +21,7 @@ def main():
 
     print(one_hot)
 
-    X = random_one_hot((1, 4, 196608)).type(torch.float32)
-
-    X_attr = deep_lift_shap(model, X, target='human', random_state=0)
+    X_attr = deep_lift_shap(model, one_hot, target='human', random_state=0)
 
     print(X_attr.shape)
 
