@@ -23,7 +23,7 @@ def main(model_path):
 
     input_tensor = tf.convert_to_tensor([input_data], dtype=tf.float32)
 
-    predictions = model(input_tensor)
+    predictions = enformer_model(input_tensor)
     print(predictions)
 
     return
