@@ -19,6 +19,8 @@ def main():
 
     print(pred)
 
+    print(one_hot)
+
     X_attr = deep_lift_shap(model, one_hot, target='human', random_state=0)
 
     print(X_attr.shape)
