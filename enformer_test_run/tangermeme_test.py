@@ -23,6 +23,10 @@ def main():
 
     print(one_hot.sum(dim=1))
 
+    seq = torch.randint(0, 4, (1, 196_608))  # Ensure indices are in the range [0, 3]
+
+    one_hot = seq_indices_to_one_hot(seq)
+
     if not torch.all(one_hot.sum(dim=1) == 1):
         raise ValueError("The one-hot encoding is not correct")
 
