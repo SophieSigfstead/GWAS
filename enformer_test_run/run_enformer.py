@@ -21,11 +21,16 @@ def main():
     if len(dna_sequence) != SEQ_LENGTH:
         dna_sequence = dna_sequence[:SEQ_LENGTH]
 
+    del dna_sequence
+
     input_data = one_hot_encode_dna(dna_sequence)
     print("Input array shape: ", input_data.shape)
 
+<<<<<<< HEAD
     del dna_sequence
 
+=======
+>>>>>>> 17f4aea5cc08e90995aa74a039ab6d7898b1ccfb
     input_array = np.array([input_data] * BATCH_SIZE, dtype=np.float32)
     print("Input array shape: ", input_array.shape)
 
