@@ -12,10 +12,6 @@ def main(model_path):
 
     model = tf.saved_model.load(model_path)
 
-    print("Available signatures:")
-    for key in model.signatures.keys():
-        print(key)
-
     infer = model.signatures["serving_default"]
 
     dna_sequence = "AGCT" * 49152
@@ -26,7 +22,7 @@ def main(model_path):
 
     input_tensor = tf.convert_to_tensor([input_data], dtype=tf.float32)
 
-    predictions = infer(input_tensor)
+    predictions = model(input_tensor)
     print(predictions)
 
     return
