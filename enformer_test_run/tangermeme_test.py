@@ -3,16 +3,18 @@ import torch
 import tangermeme
 from tangermeme.deep_lift_shap import deep_lift_shap
 from matplotlib import pyplot as plt
-
+from tangermeme.plot import plot_logo
 def main():
 
     model = from_pretrained('EleutherAI/enformer-official-rough')
 
-    seq = torch.randint(0, 5, (1, 196_608))
+    seq = torch.randint(0, 4, (1, 196_608))
 
     one_hot = seq_indices_to_one_hot(seq)
 
     pred = model(one_hot)
+
+    print(one_hot.shape)
 
     print(pred)
 
