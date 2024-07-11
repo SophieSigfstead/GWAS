@@ -12,7 +12,7 @@ def one_hot_encode_dna(sequence):
 def main(model_path):
 
     SEQ_LENGTH = 393_216
-    BATCH_SIZE = 100
+    BATCH_SIZE = 1
 
     enformer_model = hub.load("https://kaggle.com/models/deepmind/enformer/frameworks/TensorFlow2/variations/enformer/versions/1").model
 
@@ -34,7 +34,7 @@ def main(model_path):
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print("Usage: python run_enformer.py <enformer_model_path>")
+        print("Usage: python run_enformer.pycd")
         sys.exit(1)
 
     model_path = sys.argv[1]
