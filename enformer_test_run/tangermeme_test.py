@@ -21,7 +21,7 @@ def main():
 
     print(pred)
 
-    print("predications shape", pred.shape)
+    print("predications shape", pred['human'].shape)
 
     X = random_one_hot((1,4,2000)).type(torch.float32)
 
