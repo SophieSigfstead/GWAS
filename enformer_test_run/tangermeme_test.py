@@ -19,15 +19,9 @@ def main():
 
     print(pred)
 
-    print(one_hot)
+    seq = random_one_hot((1, 4, 2000)).type(torch.float32)  # Ensure indices are in the range [0, 3]
 
-    print(one_hot.sum(dim=1))
-
-    seq = torch.randint(0, 4, (1, 196_608))  # Ensure indices are in the range [0, 3]
-
-    one_hot = seq_indices_to_one_hot(seq)
-
-    X_attr = deep_lift_shap(model, one_hot, target='human', random_state=0)
+    X_attr = deep_lift_shap(model, seq, target='human', random_state=0)
 
     print(X_attr.shape)
 
