@@ -5,6 +5,8 @@ from tangermeme.deep_lift_shap import deep_lift_shap
 from matplotlib import pyplot as plt
 from tangermeme.plot import plot_logo
 from tangermeme.utils import random_one_hot
+from tangermeme.ersatz import substitute
+
 def main():
 
     model = from_pretrained('EleutherAI/enformer-official-rough')
@@ -19,9 +21,10 @@ def main():
 
     print(pred)
 
-    seq = random_one_hot((1, 1500, 4)).type(torch.float32)  # Ensure indices are in the range [0, 3]
+    X = random_one_hot((1, 2000, 4)).type(torch.float32)
+    X = substitute(X, "GTGACTCATC")# Ensure indices are in the range [0, 3]
 
-    X_attr = deep_lift_shap(model, seq, target='human', random_state=0)
+    X_attr = deep_lift_shap(model, x, target='human', random_state=0)
 
     print(X_attr.shape)
 
