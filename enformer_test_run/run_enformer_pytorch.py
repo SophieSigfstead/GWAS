@@ -12,9 +12,15 @@ def main():
 
     one_hot = seq_indices_to_one_hot(seq)
 
+    print(one_hot)
+    
+    print("one hot shape", one_hot.shape)
+
     pred = model(one_hot)
 
     print(pred)
+
+    print("Predictions shape", pred['human'].shape)
 
     return
 
