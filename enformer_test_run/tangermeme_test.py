@@ -13,7 +13,7 @@ def main():
 
     one_hot = random_one_hot((1, 4, 196608)).type(torch.float32)
 
-    one_hot = one_hot.permute(0, 2, 1)
+    #one_hot = one_hot.permute(0, 2, 1)
 
     pred = model(one_hot)
 
