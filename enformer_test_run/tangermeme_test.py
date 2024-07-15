@@ -23,7 +23,7 @@ def main():
 
     X = random_one_hot((1,4,2000)).type(torch.float32)
     X = substitute(X, "GTGACTCATC")# Ensure indices are in the range [0, 3]
-
+    X = X.permute(0,2,1)
     X_attr = deep_lift_shap(model, X, target='human', random_state=0)
 
     print(X_attr.shape)
