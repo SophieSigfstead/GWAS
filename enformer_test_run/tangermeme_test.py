@@ -19,6 +19,8 @@ def main():
 
     pred = model(one_hot)
 
+    print("HELLO")
+    
     print(pred)
 
     print("predications shape", pred['human'].shape)
