@@ -21,7 +21,7 @@ def main():
 
     print(pred)
 
-    X = random_one_hot((1, 2000, 4)).type(torch.float32)
+    X = random_one_hot((1,4,2000)).type(torch.float32)
     X = substitute(X, "GTGACTCATC")# Ensure indices are in the range [0, 3]
 
     X_attr = deep_lift_shap(model, x, target='human', random_state=0)
