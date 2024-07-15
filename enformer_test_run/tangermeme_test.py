@@ -13,17 +13,18 @@ def main():
 
     one_hot = random_one_hot((1, 4, 196608)).type(torch.float32)
 
-    #one_hot = one_hot.permute(0, 2, 1)
+    one_hot = one_hot.permute(0, 2, 1)
+
+    print("One hot shape", one_hot.shape)
 
     pred = model(one_hot)
-
-    print(one_hot.shape)
 
     print(pred)
 
     X = random_one_hot((1,4,2000)).type(torch.float32)
     #X = substitute(X, "GTGACTCATC")# Ensure indices are in the range [0, 3]
     X = X.permute(0,2,1)
+
     print(X)
     X_attr = deep_lift_shap(model, X, target='human', random_state=0)
 
