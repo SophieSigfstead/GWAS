@@ -19,7 +19,7 @@ def main():
 
     print(pred)
 
-    seq = random_one_hot((1, 2000, 4)).type(torch.float32)  # Ensure indices are in the range [0, 3]
+    seq = random_one_hot((2000, 1, 4)).type(torch.float32)  # Ensure indices are in the range [0, 3]
 
     X_attr = deep_lift_shap(model, seq, target='human', random_state=0)
 
