@@ -58,12 +58,39 @@ def match_csv_tsv(directory_gwas_study_tsv, directory_1000_genomes, track_select
                 else:
                     merged_chunk.to_csv(f_out, index=False, mode='a', header=False)
 
+         # add the tsv rows not included in the original file. If a row of the tsv has pos and chr combination is not in the file, then add it,
+         # with null values for the columns resulting from the csv file, and filling in the columsn from the tsv
+         # - chormosome goes to chr, other allele goes to alt, effect allele goes to ref, base_pair_location goes to pos
+        combined_data = pd.read_csv(original_result_file_path)
+        
+        missing_tsv_rows = tsv_data[~tsv_data.set_index(tsv_match_columns).index.isin(combined_data.set_index(csv_match_columns).index)]
+        
+        # Get the length of the missing_tsv_rows DataFrame
+        print("length of missing tsv rows", len(missing_tsv_rows))
+
+        missing_tsv_rows = missing_tsv_rows.rename(columns={
+            'chromosome': 'chr',
+            'base_pair_location': 'pos',
+            'other_allele': 'alt',
+            'effect_allele': 'ref'
+        })
+
+        missing_tsv_rows['average_SAD'] = None  # Fill in with NaN for missing average_SAD
+
+        for col in track_selection_list + csv_columns_no_sad:
+            if col not in missing_tsv_rows.columns:
+                missing_tsv_rows[col] = None  # Fill in with NaN for missing CSV columns
+
+        with open(original_result_file_path, 'a') as f_out:
+            missing_tsv_rows.to_csv(f_out, index=False, header=False)
+        missing_tsv_rows.to_csv('missing_tsv_rows.csv', index=False)
+        
     print(f"Original results written to {original_result_file_path}")
 
     # Sort by absolute value of average_SAD, and save as new file
     combined_data = pd.read_csv(original_result_file_path)
     combined_data['abs_average_SAD'] = combined_data['average_SAD'].abs()  # Calculate absolute value
-    sorted_combined_data = combined_data.sort_values(by='abs_average_SAD')
+    sorted_combined_data = combined_data.sort_values(by='abs_average_SAD',ascending=False, na_position='last')
 
     # Add ranking column
     sorted_combined_data['ranking'] = range(1, len(sorted_combined_data) + 1)

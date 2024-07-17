@@ -23,11 +23,11 @@ def process_file_in_chunks(file_path, combined_output_path, filtered_indices, ch
         for start in range(0, num_rows, chunk_size):
             end = min(start + chunk_size, num_rows)
             df_single_chunk = pd.DataFrame({
-                'alt': alt[start:end],
-                'chr': chr[start:end],
-                'pos': pos[start:end],
-                'ref': ref[start:end],
-                'snp': snp[start:end]
+                'alt': [a.decode('utf-8') if isinstance(a, bytes) else a for a in alt[start:end]],
+                'chr': [int(c.decode('utf-8').replace('chr', '')) for c in chr[start:end]],
+                'pos': [int(p) for p in pos[start:end]],
+                'ref': [r.decode('utf-8') if isinstance(r, bytes) else r for r in ref[start:end]],
+                'snp': [s.decode('utf-8') if isinstance(s, bytes) else s for s in snp[start:end]]
             })
 
             df_SAD_chunk = pd.DataFrame(SAD[start:end, filtered_indices], columns=[f'SAD{index}' for index in range(len(filtered_indices))])
