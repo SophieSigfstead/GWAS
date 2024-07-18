@@ -3,7 +3,8 @@ import pandas as pd
 import numpy
 
 def threshold_calculator(df, sd, track):
-    df_with_sad = df[df[track].notna()]
+    df_with_sad = df[(df[track].notna()) & (df[track].abs() < 1) & (df[track].abs() >= 0)]
+    print(df[track].value_counts())
     print("len df with sad", len(df_with_sad))
     std_dev = df_with_sad[track].std().astype(float)
     print("std_dev", std_dev)
