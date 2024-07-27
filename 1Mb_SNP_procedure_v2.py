@@ -3,15 +3,15 @@ import pandas as pd
 import numpy
 
 def threshold_calculator(df, sd, track):
+
     df_with_sad = df[(df[track].notna()) & (df[track].abs() < 1) & (df[track].abs() >= 0)]
-    print(df[track].value_counts())
-    print("len df with sad", len(df_with_sad))
-    std_dev = df_with_sad[track].std().astype(float)
-    print("std_dev", std_dev)
-    mean = df_with_sad[track].mean().astype(float)
-    print("mean:", mean)
+  
+    std_dev = df_with_sad[track].std()
+    mean = df_with_sad[track].mean()
+
     upper_threshold = mean + (sd * std_dev)
     lower_threshold = mean - (sd * std_dev)
+
     return upper_threshold, lower_threshold
 
 def main(path_to_combined_csv, sd, comparison_study):
@@ -25,17 +25,15 @@ def main(path_to_combined_csv, sd, comparison_study):
 
     for track in TRACK_LIST:
         df[track] = df[track].astype(float)
-        print(df[track][0:5])
     
     
     filtered_df = df[df[TRACK_LIST[0]].notna()]
+    print("fitlered df", len(filtered_df))
 
     output_columns = ['SAD1', 'SAD9', 'alt', 'chr', 'pos', 'ref', 'snp', 'beta', 'standard_error', 'effect_allele_frequency', 'p_value', 'average_SAD', 'abs_average_SAD', 'ranking']
     result_df = pd.DataFrame(columns=output_columns)
 
     threshold_dict = {}
-    
-
 
     for track in TRACK_LIST:
         upper_threshold, lower_threshold = threshold_calculator(filtered_df, sd, track)
@@ -43,11 +41,26 @@ def main(path_to_combined_csv, sd, comparison_study):
 
     print(threshold_dict)
 
+    # create a boolean DataFrame where each cell is True if the condition is met
+    condition_df = pd.DataFrame(False, index=filtered_df.index, columns=TRACK_LIST)
     for track in TRACK_LIST:
+        condition_df[track] = (filtered_df[track] > threshold_dict[track]['upper']) | (filtered_df[track] < threshold_dict[track]['lower'])
+
+    # Combine the boolean columns to see if any condition is met for each row
+    rows_meeting_criteria = condition_df.any(axis=1)
+
+#       Count the number of rows where at least one condition is met
+    n_snps_filtered = rows_meeting_criteria.sum()
+
+    print("n_snps_filtered", n_snps_filtered)
+
+    for track in TRACK_LIST:
+        sum = 0
         for chr_num in range(1, 23):
             chr_df = filtered_df[filtered_df['chr'] == chr_num]
-            chr_df = chr_df[(chr_df['average_SAD'] > threshold_dict[track]['upper']) | (chr_df['average_SAD'] < threshold_dict[track]['lower'])]
+            chr_df = chr_df[(chr_df[track] > threshold_dict[track]['upper']) | (chr_df[track] < threshold_dict[track]['lower'])]
             chr_df = chr_df.sort_values(by='p_value', ascending=True).reset_index(drop=True)
+            sum = sum + len(chr_df)
 
             while not chr_df.empty:
                 top_snp = chr_df.iloc[0]
@@ -55,13 +68,14 @@ def main(path_to_combined_csv, sd, comparison_study):
                 pos_sig_snp = top_snp['pos']
                 chr_df = chr_df[~((chr_df['pos'] < pos_sig_snp + 1000000) & (chr_df['pos'] > pos_sig_snp - 1000000))]
                 chr_df = chr_df.reset_index(drop=True)
-
+        print("sum ~ n snps filtered", sum)
+    
     print("len result df", len(result_df))
     
     # modification: take the set of the result df rows
     result_df = pd.DataFrame(list(set([tuple(row) for row in result_df.to_records(index=False)])), columns=output_columns)
 
-    n_snps_filtered = len(result_df)
+    print("len result df after", len(result_df))
 
     # threshold result according to new pvalues
     new_p_value_threshold = 5e-8 * (n_snps_prev / n_snps_filtered)

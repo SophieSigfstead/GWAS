@@ -35,7 +35,7 @@ def match_csv_tsv(directory_gwas_study_tsv, directory_1000_genomes, track_select
 
                 # Filter and calculate average SAD
                 chunk_filtered = chunk[track_selection_list + csv_columns_no_sad].copy()
-                chunk_filtered.loc[:, 'average_SAD'] = chunk_filtered[track_selection_list].mean(axis=1)  # Calculate average SAD
+                chunk_filtered['average_SAD'] = chunk_filtered[track_selection_list].mean(axis=1)  # Calculate average SAD
 
                 merged_chunk = chunk_filtered.merge(
                     tsv_data,
@@ -58,9 +58,9 @@ def match_csv_tsv(directory_gwas_study_tsv, directory_1000_genomes, track_select
                 else:
                     merged_chunk.to_csv(f_out, index=False, mode='a', header=False)
 
-         # add the tsv rows not included in the original file. If a row of the tsv has pos and chr combination is not in the file, then add it,
-         # with null values for the columns resulting from the csv file, and filling in the columsn from the tsv
-         # - chormosome goes to chr, other allele goes to alt, effect allele goes to ref, base_pair_location goes to pos
+        # Add the TSV rows not included in the original file. If a row of the TSV has pos and chr combination not in the file, then add it,
+        # with null values for the columns resulting from the CSV file, and filling in the columns from the TSV
+        # - chromosome goes to chr, other allele goes to alt, effect allele goes to ref, base_pair_location goes to pos
         combined_data = pd.read_csv(original_result_file_path)
         
         missing_tsv_rows = tsv_data[~tsv_data.set_index(tsv_match_columns).index.isin(combined_data.set_index(csv_match_columns).index)]
@@ -75,22 +75,25 @@ def match_csv_tsv(directory_gwas_study_tsv, directory_1000_genomes, track_select
             'effect_allele': 'ref'
         })
 
-        missing_tsv_rows['average_SAD'] = None  # Fill in with NaN for missing average_SAD
+        # Create a DataFrame with the same columns as the combined CSV file
+        missing_tsv_rows_formatted = pd.DataFrame(columns=combined_data.columns)
 
-        for col in track_selection_list + csv_columns_no_sad:
-            if col not in missing_tsv_rows.columns:
-                missing_tsv_rows[col] = None  # Fill in with NaN for missing CSV columns
+        # Fill in the missing_tsv_rows_formatted with the TSV data
+        for col in missing_tsv_rows.columns:
+            if col in missing_tsv_rows_formatted.columns:
+                missing_tsv_rows_formatted[col] = missing_tsv_rows[col]
 
         with open(original_result_file_path, 'a') as f_out:
-            missing_tsv_rows.to_csv(f_out, index=False, header=False)
-        missing_tsv_rows.to_csv('missing_tsv_rows.csv', index=False)
+            missing_tsv_rows_formatted.to_csv(f_out, index=False, header=False)
+        
+        missing_tsv_rows_formatted.to_csv('1000_genomes_csv_tsv_match/missing_tsv_rows.csv', index=False)
         
     print(f"Original results written to {original_result_file_path}")
 
     # Sort by absolute value of average_SAD, and save as new file
     combined_data = pd.read_csv(original_result_file_path)
     combined_data['abs_average_SAD'] = combined_data['average_SAD'].abs()  # Calculate absolute value
-    sorted_combined_data = combined_data.sort_values(by='abs_average_SAD',ascending=False, na_position='last')
+    sorted_combined_data = combined_data.sort_values(by='abs_average_SAD', ascending=False, na_position='last')
 
     # Add ranking column
     sorted_combined_data['ranking'] = range(1, len(sorted_combined_data) + 1)
@@ -112,3 +115,4 @@ if __name__ == "__main__":
         directory_1000_genomes = sys.argv[2]
         main(directory_gwas_study_tsv, directory_1000_genomes)
     sys.exit()
+

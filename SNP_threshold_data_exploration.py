@@ -17,6 +17,52 @@ def main(path_to_combined_csv):
     print(f"Rows from tsv with no match in 1000 genomes: {beta_not_SAD_count}")
     print(f"Rows with from 1000 genomes with no match in tsv: {SAD_not_beta_count}")
     print(f"Length of df: {length_of_df}")
+
+    df_with_sad = df[(df['SAD1'].notna())]
+
+    # Calculating percentiles
+    percentiles = df_with_sad['average_SAD'].quantile([0.25, 0.5, 0.75])
+    # Calculating standard deviation
+    std_dev = df_with_sad['average_SAD'].std()
+    # Calculating mean
+    mean = df_with_sad['average_SAD'].mean()
+
+    # Calculating mean +/- standard deviations
+    mean_plus_0_5sd = mean + (0.5*std_dev)
+    mean_minus_0_5sd = mean - (0.5*std_dev)
+    mean_plus_1sd = mean + std_dev
+    mean_minus_1sd = mean - std_dev
+    mean_plus_1_5sd = mean + (1.5*std_dev)
+    mean_minus_1_5sd = mean - (1.5*std_dev)
+    mean_plus_2sd = mean + 2 * std_dev
+    mean_minus_2sd = mean - 2 * std_dev
+    mean_plus_2_5sd = mean + (2.5*std_dev)
+    mean_minus_2_5sd = mean - (2.5*std_dev)
+    mean_plus_3sd = mean + 3 * std_dev
+    mean_minus_3sd = mean - 3 * std_dev
+
+    print("Percentiles of the 'average_SAD' column:")
+    print(percentiles)
+
+    print("\nStandard Deviation of the 'average_SAD' column:")
+    print(std_dev)
+
+    print("\nMean of the 'average_SAD' column:")
+    print(mean)
+
+    print("\nMean ± standard deviations:")
+    print(f"Mean + 1 SD: {mean_plus_1sd}")
+    print(f"Mean - 1 SD: {mean_minus_1sd}")
+    print(f"Mean + 2 SD: {mean_plus_2sd}")
+    print(f"Mean - 2 SD: {mean_minus_2sd}")
+    print(f"Mean + 3 SD: {mean_plus_3sd}")
+    print(f"Mean - 3 SD: {mean_minus_3sd}")
+    print(f"Mean + 0.5 SD: {mean_plus_0_5sd}")
+    print(f"Mean - 0.5 SD: {mean_minus_0_5sd}")
+    print(f"Mean + 1.5 SD: {mean_plus_1_5sd}")
+    print(f"Mean - 1.5 SD: {mean_minus_1_5sd}")
+    print(f"Mean + 2.5 SD: {mean_plus_2_5sd}")
+    print(f"Mean - 2.5 SD: {mean_minus_2_5sd}")
     
     # generate a plot of abs_average_SAD distribution of all rows
     plt.figure(figsize=(10, 6))
