@@ -15,8 +15,9 @@ def match_csv_txt(gwas_directory, directory_1000_genomes, track_list):
     clear_directory(output_path)
 
     # Load text file data into memory and filter relevant columns
-    text_data = pd.read_csv(gwas_directory, sep=' ')
-    text_data = text_data[['MarkerName', 'P']]
+    text_data = pd.read_csv(gwas_directory, sep=' ', names = ['MarkerName',  'A1' ,'A2' ,'Freq' , 'LogOR', 'StdErrLogOR', 'P'])
+    print(text_data.columns)
+    text_data = text_data[['MarkerName',  'A1' ,'A2' ,'Freq' , 'LogOR', 'StdErrLogOR', 'P']]
     text_data.set_index('MarkerName', inplace=False)
 
     csv_columns_no_sad = ['alt', 'chr', 'pos', 'ref', 'snp']
@@ -47,7 +48,7 @@ def match_csv_txt(gwas_directory, directory_1000_genomes, track_list):
                     print(f"{sad_column} not found in chunk {chunk_index+1} of {csv_file}")
                     continue
 
-                chunk_filtered_sad = merged_chunk[[sad_column] + csv_columns_no_sad + ['MarkerName', 'P']].reset_index(drop=True)
+                chunk_filtered_sad = merged_chunk[[sad_column] + csv_columns_no_sad + ['MarkerName',  'A1' ,'A2', 'Freq' , 'LogOR', 'StdErrLogOR', 'P']].reset_index(drop=True)
 
                 # Define the output file path for the current track
                 track_output_file_path = os.path.join(output_path, f'result_SAD{track}.csv')
@@ -77,7 +78,7 @@ def match_csv_txt(gwas_directory, directory_1000_genomes, track_list):
             remaining_text_data_with_nulls[col] = pd.NA
 
         if not remaining_text_data_with_nulls.empty:
-            remaining_text_data_with_nulls = remaining_text_data_with_nulls[[f'SAD{track}'] + csv_columns_no_sad + ['MarkerName', 'P']]
+            remaining_text_data_with_nulls = remaining_text_data_with_nulls[[f'SAD{track}'] + csv_columns_no_sad + ['MarkerName',  'A1' ,'A2' ,'Freq' , 'LogOR', 'StdErrLogOR', 'P']]
             remaining_text_data_with_nulls.to_csv(track_output_file_path, index=False, mode='a', header=False)
 
     print("Processing complete.")
