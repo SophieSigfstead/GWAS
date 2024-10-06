@@ -11,6 +11,7 @@ def clear_directory(directory_path):
     os.makedirs(directory_path)
 
 def match_csv_txt(gwas_directory, directory_1000_genomes, track_list):
+   
     chunksize = 100000
     output_path = './gwas_4_alz_matching'
     clear_directory(output_path)
@@ -85,14 +86,14 @@ def match_csv_txt(gwas_directory, directory_1000_genomes, track_list):
     remaining_text_data = text_data[~text_data['SNP'].isin(matched_markernames)].reset_index()
     print(len(remaining_text_data))
 
-
+    
         # Add remaining text rows to each combined file with null values for the columns from the CSV files
+    output_path = './gwas_4_alz_matching'
     for track in track_list:
         track_output_file_path = os.path.join(output_path, f'result_SAD{track}.csv')
         remaining_text_data_with_nulls = remaining_text_data.copy()
         for col in [f'SAD{track}'] + csv_columns_no_sad:
-            remaining_text_data_with_nulls[col] = pd.NA
-
+            remaining_text_data_with_nulls[col] = pd.NA    
         if not remaining_text_data_with_nulls.empty:
             remaining_text_data_with_nulls = remaining_text_data_with_nulls[[f'SAD{track}'] + csv_columns_no_sad + ['chr',	'PosGRCh37'	,'testedAllele',	'otherAllele',	'z',	'p',	'N', 'SNP']]
             remaining_text_data_with_nulls.to_csv(track_output_file_path, index=False, mode='a', header=False)

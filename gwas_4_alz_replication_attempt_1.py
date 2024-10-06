@@ -1,9 +1,13 @@
 import sys 
 import pandas as pd
 import subprocess
-# Goal: Replicate study: https://www.nature.com/articles/s41588-018-0311-9
-# Title: Genome-wide meta-analysis identifies new loci and functional pathways influencing Alzheimer’s disease risk
+# 2021 Study - which is being replicated here
 
+
+
+# 2019 study:
+# Title: Genome-wide meta-analysis identifies new loci and functional pathways influencing Alzheimer’s disease risk
+# https://www.nature.com/articles/s41588-018-0311-9
 def merge_loci(df, distance_threshold=250000):
     merged = []
     df = df.sort_values(by=['chr', 'left_border']).reset_index(drop=True)  # Sort by chromosome and left border

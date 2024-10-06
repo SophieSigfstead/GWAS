@@ -88,7 +88,7 @@ def main(directory_gwas_study_text, directory_1000_genomes, track_list):
 
 if __name__ == "__main__":
     if len(sys.argv) != 4:
-        print("Usage: python script.py <path for GWAS summary stats text> <directory for 1000 genomes csvs> <track list e.g. [1,2,3]>")
+        print("Usage: python script.py  v")
     else:
         directory_gwas_study_text = sys.argv[1]
         directory_1000_genomes = sys.argv[2]

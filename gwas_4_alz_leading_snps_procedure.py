@@ -164,6 +164,7 @@ def main(directory_gwas_combined_files, sd):
     threshold_and_coding_sorted = pd.read_csv(f'gwas_4_alz_intermediate_files/gwas_4_threshold_and_coding_snps_sd={sd}.csv')
     print("threshold_and_coding_sorted")
     print(threshold_and_coding_sorted.head())
+    threshold_and_coding_sorted = threshold_and_coding_sorted[threshold_and_coding_sorted['p'] < new_pvalue]
     
     
     plink_path = "../tools/plink2/plink2"
@@ -174,7 +175,7 @@ def main(directory_gwas_combined_files, sd):
     all_variants.to_csv('./gwas_4_alz_intermediate_files/all_variants_list', sep = "\t", index=False)
     result_df = pd.DataFrame(columns = ['pos', 'chr', 'p', 'snp', 'left_border', 'right_border'])
 
-    clumped_results_intermediate['P']<new_pvalue
+    
     for _, row in threshold_and_coding_sorted.iterrows():
         pos = int(row['pos'])
         chr = int(row['chr_x'])
@@ -239,13 +240,13 @@ def main(directory_gwas_combined_files, sd):
     
         # Iterate over all pairs of intervals
         for _, row1 in df1.iterrows():
-            chr1 = int(row1['chr_x'])
+            chr1 = int(row1['chr'])
             for _, row2 in df2.iterrows():
-                chr2 = int(row2['chr_x'])
+                chr2 = int(row2['chr'])
                 # Check if the intervals overlap on the same chromosome
                 if chr1==chr2 and row1['right_border'] >= row2['left_border'] and row1['left_border'] <= row2['right_border']:
                     overlap_count += 1
-                    
+                    break; 
         return overlap_count
 
     print("number of snps found with our method", len(clumped_results_with_merged_borders))
@@ -261,7 +262,7 @@ def main(directory_gwas_combined_files, sd):
     print(ground_truth_coding)
     ground_truth_coding.to_csv(f'gwas_4_alz_intermediate_files/ground_truth_coding_snps_sd={sd}')
 
-    overlap_count = count_overlaps(ground_truth_snps, clumped_results_with_merged_borders)
+    overlap_count = count_overlaps(clumped_results_with_merged_borders, ground_truth_snps)
 
     print(f"Number of overlapping loci: {overlap_count}")
 

@@ -24,7 +24,7 @@ Analysis of results of GWAS 1 analysis was completed using the following data:
 - eQTL (Data available in GWAS/EQTLs)
 - FANTOM5_annotations (Data available in GWAS/FANTOM5_annotations)
 
-- A seperate analysis was ran to understand the effects of a single SAD track being used as a threshold. The results of this are stored in GWAS/GWAS_1_leading_SNPs_by_track amd GWAS/GWAS_1_leading_snps_by_track_random. These results were produced useing the gwas_1_leading_SNPs_by_track.py file. The comparison notebook is labelled gwas_1_all_vs_single_track.ipynb.
+- A seperate analysis was ran to understand the effects of a single SAD track being used as a threshold. The results of this are stored in GWAS/gwas_1_single_track_analysis/GWAS_1_leading_SNPs_by_track amd GWAS/gwas_1_single_track_analysis/GWAS_1_leading_snps_by_track_random. These results were produced using the GWAS/gwas_1_single_track_analysis/gwas_1_leading_SNPs_by_track.py file. The comparison notebook is labelled GWAS/gwas_1_single_track_analysis/gwas_1_all_vs_single_track.ipynb.
 
 ### GWAS 2:
 - Original summary statistics are available in GWAS/gwas_1_and_2_summary_statistics_data/PGC_UKB_depression_genome-wide.txt
@@ -44,7 +44,7 @@ Analysis of results of GWAS 1 analysis was completed using the following data:
 - Files produced as gwas_4_alz_leading_snps_procedure.py runs are stored in GWAS/gwas_4_alz_intermediate_files.
 - Results of running gwas_4_alz_leading_snps_procedure.py are available in GWAS/gwas_4_alz_result_files
 
-Other Directories:
+## Other Directories:
 ### GWAS/enformer_and_tangermeme 
 
 ### Finemapping: GWAS/finemapping and GWAS/fine_mapping_results
@@ -60,11 +60,15 @@ Other Directories:
 - Contains genome annotations. Version v46lift37 (GWAS/genome_assembly/gencode.v46lift37.annotation.gff3) is most applicable to hg37, which is applicable to gwas 1-4.
 - Contains make_coding_regions_list.py. This was used to create the exon_regions that are used to identify coding snps in the GWAS filtering procedure. This routine creates the regions for coding snps, which are contained in GWAS/genome_assembly/exon_regions_v2.csv
 
-## h5_to_csv_scripts
+### h5_to_csv_scripts
 - Used to convert h5 files to csv. This was used to produce the 1000genomes_as_csv file from H5 files provided by Enformer paper: 
 https://console.cloud.google.com/storage/browser/dm-enformer/variant-scores/1000-genomes/enformer;tab=objects?prefix=&forceOnObjectsSortingFiltering=false
 
-## leading SNPs_SAD_track_visualization
+### leading SNPs_SAD_track_visualization
+
+### random_intermediate_files
+- Used for running analyses for Gwas 1 on random track sets, any intermediate files were placed here instead of gwas_1_intermediate_files
+
 
 
 Notes to self:
