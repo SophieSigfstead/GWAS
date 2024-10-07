@@ -33,11 +33,14 @@ def merge_loci(df, distance_threshold=250000):
         # If there are overlaps, merge them
         if not overlapping_rows.empty:
             # Update the current interval
+            print("overlaping rows", len(overlapping_rows))
+            overlapping_rows = overlapping_rows.sort_values(['p'], ascending = True)
+
             min_left_border = min(current['left_border'], overlapping_rows['left_border'].min())
             max_right_border = max(current['right_border'], overlapping_rows['right_border'].max())
             
             # Get the row with the lowest p-value
-            min_p_row = overlapping_rows.loc[overlapping_rows['p'].idxmin()]
+            min_p_row = overlapping_rows.loc[0]
             
             # Create the merged interval
             merged_interval = {
@@ -226,8 +229,13 @@ def main(directory_gwas_combined_files, sd):
         result_df=result_df._append({"chr":chr, "pos": pos, "snp": snp, "p": p, "left_border": left_border, "right_border": right_border}, ignore_index=True)
         print(result_df.head())
         print(len(result_df))
-        result_df.to_csv("./gwas_4_alz_intermediate_files/result_df.csv")
+
+        result_df = result_df.sort_values(by=['chr', 'pos'])
+        result_df.to_csv(f"./gwas_4_alz_intermediate_files/result_df_sd={sd}.csv")
+        
         merged_result_df = merge_loci(result_df)
+        merged_result_df = merge_loci(merged_result_df)
+        
         merged_result_df.to_csv(f'./gwas_4_alz_result_files/filtered_snps_sd={sd}.csv')
         print("length of merged df " , len(merged_result_df))
     

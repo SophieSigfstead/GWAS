@@ -2,12 +2,13 @@ import sys
 import pandas as pd
 import subprocess
 # 2021 Study - which is being replicated here
-
-
+#A genome-wide association study with 1,126,563 individuals identifies new risk loci for Alzheimer's disease
+#https://pubmed.ncbi.nlm.nih.gov/34493870
 
 # 2019 study:
 # Title: Genome-wide meta-analysis identifies new loci and functional pathways influencing Alzheimer’s disease risk
 # https://www.nature.com/articles/s41588-018-0311-9
+
 def merge_loci(df, distance_threshold=250000):
     merged = []
     df = df.sort_values(by=['chr', 'left_border']).reset_index(drop=True)  # Sort by chromosome and left border
@@ -16,37 +17,48 @@ def merge_loci(df, distance_threshold=250000):
         current = df.iloc[0]  # Take the first row
         df = df.iloc[1:]  # Remove the first row from the dataframe
         
-        # Find overlapping or nearby rows within the threshold
-        overlapping_rows = df[
-            (df['chr'] == current['chr']) &
-            (df['left_border'] <= current['right_border'] + distance_threshold) &
-            (df['right_border'] >= current['left_border'] - distance_threshold)
-        ]
+        # Initialize the region to be merged with current row
+        min_left_border = current['left_border']
+        max_right_border = current['right_border']
+        min_p_row = current
         
-        # If there are overlaps, merge them
-        if not overlapping_rows.empty:
-            # Update the current interval
-            min_left_border = min(current['left_border'], overlapping_rows['left_border'].min())
-            max_right_border = max(current['right_border'], overlapping_rows['right_border'].max())
+        # Keep track of rows that need to be merged
+        rows_to_merge = [current]
+        
+        # Find and merge all overlapping or nearby rows
+        while True:
+            # Find rows within the current merge window
+            overlapping_rows = df[
+                (df['chr'] == current['chr']) &
+                (df['left_border'] <= max_right_border + distance_threshold) &
+                (df['right_border'] >= min_left_border - distance_threshold)
+            ]
             
-            # Get the row with the lowest p-value
-            min_p_row = overlapping_rows.loc[overlapping_rows['p'].idxmin()]
+            if overlapping_rows.empty:
+                # No more overlaps, we are done with this merge group
+                break
             
-            # Create the merged interval
-            merged_interval = {
-                'pos': min_p_row['pos'],
-                'chr': current['chr'],
-                'p': min_p_row['p'],
-                'snp': min_p_row['snp'],
-                'left_border': min_left_border,
-                'right_border': max_right_border
-            }
+            # Expand the region based on the new overlaps
+            min_left_border = min(min_left_border, overlapping_rows['left_border'].min())
+            max_right_border = max(max_right_border, overlapping_rows['right_border'].max())
             
-            # Remove the overlapping rows from the dataframe
+            # Find the SNP with the lowest p-value in the merged group
+            rows_to_merge.extend(overlapping_rows.to_dict('records'))
+            all_rows_df = pd.DataFrame(rows_to_merge)
+            min_p_row = all_rows_df.loc[all_rows_df['p'].idxmin()]
+            
+            # Remove the overlapping rows from the dataframe for further processing
             df = df.drop(overlapping_rows.index).reset_index(drop=True)
-        else:
-            # If no overlap, the current interval is finalized
-            merged_interval = current.to_dict()
+        
+        # After all merging is done, create the final merged interval
+        merged_interval = {
+            'pos': min_p_row['pos'],
+            'chr': min_p_row['chr'],
+            'p': min_p_row['p'],
+            'snp': min_p_row['snp'],
+            'left_border': min_left_border,
+            'right_border': max_right_border
+        }
         
         merged.append(merged_interval)
     

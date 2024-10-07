@@ -1,2 +1,0 @@
-MDD GWAS: https://www.nature.com/articles/s41588-023-01558-w#data-availability
-- GWAS catalog accession code: GCST90277450
