@@ -1,0 +1,14 @@
+MDD GWAS #1: https://www.nature.com/articles/s41588-023-01558-w#data-availability
+- GWAS catalog accession code: GCST90277450
+
+MDD GWAS #2: Genome-wide meta-analysis of depression identifies 102 independent variants and highlights the importance of the prefrontal brain regions
+https://www.nature.com/articles/s41593-018-0326-7
+Data download link : https://datashare.ed.ac.uk/handle/10283/3203
+No GCST catalog code. File name in this directory: PGC_UKB_depression_genome-wide.txt
+
+SCZ GWAS #3: Biological insights from 108 schizophrenia-associated genetic loci
+https://www.nature.com/articles/nature13595 
+
+ALZ GWAS #4: A genome-wide association study with 1,126,563 individuals identifies new risk loci for Alzheimer's disease
+https://pubmed.ncbi.nlm.nih.gov/34493870
+

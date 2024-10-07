@@ -23,8 +23,9 @@ Note that all files associated with a specific gwas are labelled beginning with 
 Analysis of results of GWAS 1 analysis was completed using the following data:
 - eQTL (Data available in GWAS/EQTLs)
 - FANTOM5_annotations (Data available in GWAS/FANTOM5_annotations)
+- Other
 
-- A seperate analysis was ran to understand the effects of a single SAD track being used as a threshold. The results of this are stored in GWAS/gwas_1_single_track_analysis/GWAS_1_leading_SNPs_by_track amd GWAS/gwas_1_single_track_analysis/GWAS_1_leading_snps_by_track_random. These results were produced using the GWAS/gwas_1_single_track_analysis/gwas_1_leading_SNPs_by_track.py file. The comparison notebook is labelled GWAS/gwas_1_single_track_analysis/gwas_1_all_vs_single_track.ipynb.
+- A seperate analysis was ran to understand the effects of a single SAD track being used as a threshold. The results of this are stored in GWAS/gwas_1_single_track_analysis/GWAS_1_leading_SNPs_by_track amd GWAS/gwas_1_single_track_analysis/GWAS_1_leading_snps_by_track_random. These results were produced using the GWAS/gwas_1_single_track_analysis/gwas_1_leading_SNPs_by_track.py file. The comparison notebook to all results is labelled GWAS/gwas_1_single_track_analysis/gwas_1_all_vs_single_track.ipynb. 
 
 ### GWAS 2:
 - Original summary statistics are available in GWAS/gwas_1_and_2_summary_statistics_data/PGC_UKB_depression_genome-wide.txt
@@ -35,7 +36,7 @@ Analysis of results of GWAS 1 analysis was completed using the following data:
 ### GWAS 3:
 - Summary statistics are available in GWAS/gwas_3_scz_original_files
 - Files produced as gwas_3_scz_leading_snps_procedure.py runs are stored in GWAS/gwas_3_scz_intermediate_files.
-- Results of running gwas_3_scz_leading_snps_procedure.py are available in GWAS/gwas_3_scz_result_files
+- Results of running gwas_3_scz_leading_snps_procedure.py are available in GWAS/gwas_3_scz_result_files. 
 
 ### GWAS 4:
 - Summary statistics are available in GWAS/gwas_4_alz_summary_statistics. The study we are looking at is labelled PGCALZ2sumstatsExcluding23andMe.txt. The stats from a 2019 ALZ GWAS study from the same group (precursor to this one) are also there as they are used to label snps in this study with the correct snp ids. 
@@ -46,8 +47,10 @@ Analysis of results of GWAS 1 analysis was completed using the following data:
 
 ## Other Directories:
 ### GWAS/enformer_and_tangermeme 
+- At beginning of project, wanted to ensure that we could run Enformer + Tangermeme in pytorch. Files to do so are contained here. These were just tests to ensure functionality, nothing is built yet. 
 
 ### Finemapping: GWAS/finemapping and GWAS/fine_mapping_results
+- Used to do finemapping analysis on GWAS 1
 
 ### Genome Wide Complex Trait Analysis (GCTA): GWAS/gcta_output_directory and GWAS/gcta
 - GCTA software website: https://yanglab.westlake.edu.cn/software/gcta/#Overview
@@ -55,6 +58,8 @@ Analysis of results of GWAS 1 analysis was completed using the following data:
 - GWAS/gcta_output_directory housed intermediate gcta files while gwas_2 was running, but is currently empty. GWAS 2 was not able to be replicated well, so the analysis was not completed. 
 
 ### gencode_annotations
+- Contains annotation from: https://www.gencodegenes.org/human/release_19.html
+- Used in some analysis in the project (?), however the annotation in genome_assembly was more commonly used and up to date
 
 ### genome_assembly
 - Contains genome annotations. Version v46lift37 (GWAS/genome_assembly/gencode.v46lift37.annotation.gff3) is most applicable to hg37, which is applicable to gwas 1-4.
@@ -65,10 +70,10 @@ Analysis of results of GWAS 1 analysis was completed using the following data:
 https://console.cloud.google.com/storage/browser/dm-enformer/variant-scores/1000-genomes/enformer;tab=objects?prefix=&forceOnObjectsSortingFiltering=false
 
 ### leading SNPs_SAD_track_visualization
+- This was an analysis to compare the SAD enformer scores of the track list we identified for psychiatric conditions ([0,1,9,76,78,80,81,172,179,216,240,261,278,319,326,338,355,370,403,411,421,458,462,469,499,524,552,580,582,602,644,669]) to a random track list (see gwas_random_tracks_matching for the track list and files analysed).
 
 ### random_intermediate_files
 - Used for running analyses for Gwas 1 on random track sets, any intermediate files were placed here instead of gwas_1_intermediate_files
-
 
 
 Notes to self:
