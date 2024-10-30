@@ -1,4 +1,4 @@
-import os
+M_^import os
 import pandas as pd
 import sys
 import ast
@@ -60,7 +60,8 @@ def match_csv_txt(gwas_directory, directory_1000_genomes, track_list):
                     chunk_filtered_sad.to_csv(track_output_file_path, index=False, mode='a', header=False)
     
         # Load the first result file to get the matched MarkerNames
-    new_df = pd.read_csv(os.path.join(output_path, 'result_SAD47.csv'))
+    first_track = int(track_list[0])
+    new_df = pd.read_csv(os.path.join(output_path, f'result_SAD{first_track}.csv'))
     matched_markernames = set(new_df['base_pair_location'])
     #print(matched_markernames)
 

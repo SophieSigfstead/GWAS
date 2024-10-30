@@ -55,7 +55,6 @@ def main(directory_gwas_combined_files, directory_gwas_sig_snps, sd):
     coding_region_set = set(first_file_df[first_file_df['in_coding_region'] & first_file_df['p_value'].notna()]['snp'])
     coding_region_set_list = list(coding_region_set)
     coding_region_set_df = pd.DataFrame(coding_region_set_list, columns=['snp'])
-    coding_region_set_df.to_csv('./coding_region_set_list.csv', index=False)
     print('length of coding region set')
     print(len(coding_region_set))
 
@@ -127,7 +126,7 @@ def main(directory_gwas_combined_files, directory_gwas_sig_snps, sd):
     
     print('Sig snps coding:', len(coding_region_df))
 
-    os.makedirs('./filtered_snps_gwas_1', exist_ok=True) 
+    os.makedirs('./filtered_snps_gwas_random', exist_ok=True) 
     result_df.to_csv(f'./filtered_snps_gwas_random/filtered_snps_gwas_1_threshold={sd}.csv', index=False)
 
 

@@ -1,0 +1,685 @@
+index,target_ids,target_labels,,type,MDD,tissue
+0,b'ENCFF833POA',DNASE:cerebellum male adult (27 years) and male adult (35 years),,dnase,1,brain
+1,b'ENCFF110QGM',DNASE:frontal cortex male adult (27 years) and male adult (35 years),,dnase,1,brain
+2,b'ENCFF880MKD',DNASE:chorion,,dnase,0,embryo
+3,b'ENCFF463ZLQ',DNASE:Ishikawa treated with 0.02% dimethyl sulfoxide for 1 hour,,dnase,0,unknown
+4,b'ENCFF890OGQ',DNASE:GM03348,,dnase,0,lymphoblastoid
+5,b'ENCFF996AEF',DNASE:GM03348 genetically modified using transduction treated with 3 ug/mL doxycycline for 10 days,,dnase,0,lymphoblastoid
+6,b'ENCFF660YSU',DNASE:AG08395,,dnase,0,fibroblast
+7,b'ENCFF787MSC',DNASE:AG08396,,dnase,0,fibroblast
+8,b'ENCFF568LMQ',DNASE:AG20443,,dnase,0,fibroblast
+9,b'ENCFF685MZL',DNASE:frontal cortex female adult (67 years) and female adult (80 years),,dnase,1,brain
+10,b'ENCFF452DLO',DNASE:H54,,dnase,0,human glioblastoma multiforme
+11,b'ENCFF149TAY',DNASE:GM10248,,dnase,0,lymphoblastoid
+12,b'ENCFF093VXI',DNASE:GM12878,,dnase,0,lymphoblastoid
+13,b'ENCFF713YTW',DNASE:GM12891,,dnase,0,lymphoblastoid
+14,b'ENCFF536IEC',DNASE:GM12892,,dnase,0,lymphoblastoid
+15,b'ENCFF714ZSE',DNASE:GM18507,,dnase,0,lymphoblastoid
+16,b'ENCFF385ITM',DNASE:GM19238,,dnase,0,lymphoblastoid
+17,b'ENCFF919WIT',DNASE:GM19239,,dnase,0,lymphoblastoid
+18,b'ENCFF814MPK',DNASE:GM19240,,dnase,0,lymphoblastoid
+19,b'ENCFF153XQL',DNASE:H1-hESC,,dnase,0,stem cell
+20,b'ENCFF753SCX',DNASE:H7-hESC,,dnase,0,stem cell
+21,b'ENCFF663TLI',DNASE:H9,,dnase,0,stem cell
+22,b'ENCFF082SFS',DNASE:heart male adult (27 years) and male adult (35 years),,dnase,0,heart
+23,b'ENCFF148BGE',DNASE:HEK293T,,dnase,0,kidney
+24,b'ENCFF422TAV',DNASE:HeLa-S3 treated with interferon alpha for 4 hours,,dnase,0,cervical cancer
+25,b'ENCFF050BDU',DNASE:HeLa-S3,,dnase,0,cervical cancer
+26,b'ENCFF818FXA',DNASE:hepatocyte,,dnase,0,liver
+27,b'ENCFF136DBS',DNASE:HepG2,,dnase,0,liver
+28,b'ENCFF284JHO',DNASE:HTR-8/SVneo,,dnase,0,placenta
+29,b'ENCFF305BCB',DNASE:endothelial cell of umbilical vein newborn,,dnase,0,endothelial
+30,b'ENCFF015IAT',DNASE:CWRU1 male,,dnase,0,stem cell
+31,b'ENCFF565AEK',DNASE:iPS-NIHi11 male adult (71 year) originated from AG20443,,dnase,0,stem cell
+32,b'ENCFF637TYS',DNASE:iPS-NIHi7 female adult (85 years) originated from AG08395,,dnase,0,stem cell
+33,b'ENCFF899YDP',DNASE:K562 treated with 1 uM vorinostat for 72 hours,,dnase,0,myelogenous leukemia
+34,b'ENCFF515UNC',DNASE:K562 G2 phase,,dnase,0,myelogenous leukemia
+35,b'ENCFF708UIS',DNASE:K562 G1 phase,,dnase,0,myelogenous leukemia
+36,b'ENCFF809IIW',DNASE:LNCaP clone FGC,,dnase,0,lymph node carcinoma of prostate
+37,b'ENCFF009NEA',"DNASE:LNCaP clone FGC treated with 1 nM 17B-hydroxy-17-methylestra-4,9,11-trien-3-one for 12 hours",,dnase,0,lymph node carcinoma of prostate
+38,b'ENCFF382YNA',DNASE:MCF-7 originated from MCF-7,,dnase,0,breast
+39,b'ENCFF585BKY',DNASE:medulloblastoma,,dnase,0,medulloblastoma 
+40,b'ENCFF863UGY',DNASE:epidermal melanocyte,,dnase,0,skin
+41,b'ENCFF678LXL',DNASE:CD14-positive monocyte female,,dnase,0,white blood cell
+42,b'ENCFF690MIA',DNASE:keratinocyte female,,dnase,0,skin
+43,b'ENCFF300IKA',DNASE:osteoblast,,dnase,0,bone
+44,b'ENCFF927VUO',DNASE:psoas muscle male adult (27 years) and male adult (35 years),,dnase,0,psoas muscle
+45,b'ENCFF613XPC',DNASE:T47D treated with 10 nM 17B-estradiol for 30 minutes,,dnase,0,breast cancer
+46,b'ENCFF300QLZ',DNASE:urothelium cell line,,dnase,0,urinary
+47,b'ENCFF688CJL',DNASE:A549,,dnase,0,lung carcinoma
+48,b'ENCFF802ZBQ',DNASE:AG04449,,dnase,0,fibroblast
+49,b'ENCFF882YMD',DNASE:AG04450,,dnase,0,fibroblast
+50,b'ENCFF160AIM',DNASE:AG09309,,dnase,0,fibroblast
+51,b'ENCFF294KLB',DNASE:AG09319,,dnase,0,fibroblast
+52,b'ENCFF211SDO',DNASE:AG10803,,dnase,0,fibroblast
+53,b'ENCFF869ECL',DNASE:fibroblast of the aortic adventitia female,,dnase,0,fibroblast
+54,b'ENCFF695WLT',DNASE:BE2C,,dnase,0,neuroblastoma
+55,b'ENCFF107IJY',DNASE:BJ,,dnase,0,skin fibroblast
+56,b'ENCFF132EIR',DNASE:HS-27A,,dnase,0,bone marrow
+57,b'ENCFF964WLS',DNASE:HS-5,,dnase,0,bone marrow
+58,b'ENCFF747REW',DNASE:stromal cell of bone marrow male,,dnase,0,bone marrow
+59,b'ENCFF085OHV',DNASE:Caco-2,,dnase,0,colorectal adenocarcinoma
+60,b'ENCFF801IWM',DNASE:B cell female adult (43 years),,dnase,0,b cell
+61,b'ENCFF274MGW',DNASE:hematopoietic multipotent progenitor cell,,dnase,0,blood cell
+62,b'ENCFF753ETN',"DNASE:naive thymus-derived CD4-positive, alpha-beta T cell male adult (26 years)",,dnase,0,t cell
+63,b'ENCFF391HDR',DNASE:CMK,,dnase,0,megokaryoblastic leukemia
+64,b'ENCFF171BUA',DNASE:GM04503,,dnase,0,lymphoblastoid
+65,b'ENCFF602PIH',DNASE:GM04504,,dnase,0,lymphoblastoid
+66,b'ENCFF617HEH',DNASE:GM06990,,dnase,0,lymphoblastoid
+67,b'ENCFF709TDR',DNASE:GM12864,,dnase,0,lymphoblastoid
+68,b'ENCFF427FEF',DNASE:GM12865,,dnase,0,lymphoblastoid
+69,b'ENCFF915DFR',DNASE:GM12878,,dnase,0,lymphoblastoid
+70,b'ENCFF131HMO',DNASE:H1-hESC,,dnase,0,stem cell
+71,b'ENCFF554DWH',DNASE:cardiac mesoderm,,dnase,0,heart
+72,b'ENCFF274NDO',DNASE:cardiac mesoderm,,dnase,0,heart
+73,b'ENCFF501KNP',DNASE:cardiac mesoderm,,dnase,0,heart
+74,b'ENCFF213FJN',DNASE:cardiac mesoderm,,dnase,0,heart
+75,b'ENCFF696IEW',DNASE:H7-hESC,,dnase,0,stem cell
+76,b'ENCFF499UDS',DNASE:astrocyte of the hippocampus,,dnase,1,brain
+77,b'ENCFF901UBX',DNASE:astrocyte of the spinal cord,,dnase,0, nervous system
+78,b'ENCFF382FZE',DNASE:astrocyte of the cerebellum,,dnase,1,brain
+79,b'ENCFF102UQK',DNASE:amniotic epithelial cell,,dnase,0,amniotic epithelial cell
+80,b'ENCFF025HHG',DNASE:brain microvascular endothelial cell,,dnase,1,brain
+81,b'ENCFF353QSZ',DNASE:brain pericyte,,dnase,1,brain
+82,b'ENCFF443IYY',DNASE:smooth muscle cell of the brain vasculature female,,dnase,0,brain vasculature
+83,b'ENCFF049FGZ',DNASE:cardiac fibroblast,,dnase,0,heart
+84,b'ENCFF472TFO',DNASE:cardiac fibroblast female,,dnase,0,heart
+85,b'ENCFF484UXW',DNASE:cardiac muscle cell,,dnase,0,heart
+86,b'ENCFF923EUB',DNASE:fibroblast of the conjunctiva,,dnase,0,fibroblast eye
+87,b'ENCFF021NBR',DNASE:choroid plexus epithelial cell,,dnase,0,brain vasculature
+88,b'ENCFF169PCK',DNASE:HCT116,,dnase,0,colorectal carcinoma
+89,b'ENCFF655LKW',DNASE:epithelial cell of esophagus,,dnase,0,esophagus
+90,b'ENCFF830FDL',DNASE:HeLa-S3 G1b phase,,dnase,0,cervical cancer
+91,b'ENCFF205TKQ',DNASE:HepG2,,dnase,0,liver carcinoma
+92,b'ENCFF111BCZ',DNASE:foreskin fibroblast male newborn,,dnase,0,foreskin fibroblast
+93,b'ENCFF103JVK',DNASE:HFF-Myc originated from foreskin fibroblast,,dnase,0,foreskin fibroblast
+94,b'ENCFF117RGP',DNASE:fibroblast of gingiva,,dnase,0,gum tissue fibroblast
+95,b'ENCFF390MSL',DNASE:iris pigment epithelial cell,,dnase,0,"iris, eye"
+96,b'ENCFF634ZUJ',DNASE:HL-60,,dnase,0,leukemia
+97,b'ENCFF263BZU',DNASE:mammary epithelial cell female,,dnase,0,mammary gland
+98,b'ENCFF724CMH',DNASE:fibroblast of mammary gland female,,dnase,0,mammary gland
+99,b'ENCFF969NNQ',DNASE:dermis blood vessel endothelial cell female adult,,dnase,0,blood vessel to skin
+100,b'ENCFF250ZZO',DNASE:dermis blood vessel endothelial cell female adult,,dnase,0,blood vessel to skin
+101,b'ENCFF189TQN',DNASE:dermis blood vessel endothelial cell male newborn,,dnase,0,blood vessel to skin
+102,b'ENCFF130RBG',DNASE:dermis microvascular lymphatic vessel endothelial cell female,,dnase,0,blood vessel to skin
+103,b'ENCFF431JNM',DNASE:dermis microvascular lymphatic vessel endothelial cell male,,dnase,0,blood vessel to skin
+104,b'ENCFF468FOP',DNASE:dermis blood vessel endothelial cell male newborn,,dnase,0,blood vessel to skin
+105,b'ENCFF010NPI',DNASE:lung microvascular endothelial cell female,,dnase,0,lung
+106,b'ENCFF999UJH',DNASE:lung microvascular endothelial cell female,,dnase,0,lung
+107,b'ENCFF714QQU',DNASE:non-pigmented ciliary epithelial cell,,dnase,0,eye
+108,b'ENCFF719ZEX',DNASE:pulmonary artery endothelial cell female,,dnase,0,pulmonary artery
+109,b'ENCFF184UHW',DNASE:fibroblast of pulmonary artery,,dnase,0,pulmonary artery
+110,b'ENCFF519CAJ',DNASE:fibroblast of peridontal ligament male,,dnase,0,peridontal ligament
+111,b'ENCFF655AEV',DNASE:fibroblast of lung,,dnase,0,lung
+112,b'ENCFF457RRO',DNASE:renal cortical epithelial cell,,dnase,0,renal
+113,b'ENCFF221IPJ',DNASE:kidney epithelial cell,,dnase,0,kidney
+114,b'ENCFF656ZYW',DNASE:glomerular endothelial cell,,dnase,0,kidney
+115,b'ENCFF634YGE',DNASE:retinal pigment epithelial cell,,dnase,0,retina
+116,b'ENCFF549TYD',DNASE:skeletal muscle myoblast,,dnase,0,skeletal muscle
+117,b'ENCFF684FJC',DNASE:myotube originated from skeletal muscle myoblast,,dnase,0,skeletal muscle
+118,b'ENCFF752DYE',DNASE:endothelial cell of umbilical vein newborn,,dnase,0,umbilical vein
+119,b'ENCFF652HJH',DNASE:fibroblast of villous mesenchyme,,dnase,0,placenta
+120,b'ENCFF916JRN',DNASE:Jurkat clone E61,,dnase,0,t-cell leukemia
+121,b'ENCFF413AHU',DNASE:K562,,dnase,0,myelogenous leukemia
+122,b'ENCFF868NHV',DNASE:K562,,dnase,0,myelogenous leukemia
+123,b'ENCFF565YDB',DNASE:K562,,dnase,0,myelogenous leukemia
+124,b'ENCFF748YJM',DNASE:myocyte originated from LHCN-M2,,dnase,0,skeletal muscle
+125,b'ENCFF639MPM',DNASE:LHCN-M2,,dnase,0,skeletal muscle
+126,b'ENCFF571HTM',DNASE:LNCaP clone FGC,,dnase,0,prostate cancer
+127,b'ENCFF250TLK',DNASE:M059J,,dnase,0,glioblastoma
+128,b'ENCFF924FJR',DNASE:MCF-7,,dnase,0,breast adenocarcinoma
+129,b'ENCFF606KFN',DNASE:MCF-7 treated with 100 nM estradiol for 1 hour,,dnase,0,breast adenocarcinoma
+130,b'ENCFF411ZPI',DNASE:MCF-7,,dnase,0,breast adenocarcinoma
+131,b'ENCFF659BVQ',DNASE:CD14-positive monocyte female,,dnase,0,blood
+132,b'ENCFF897EZG',DNASE:NB4,,dnase,0,leukemia
+133,b'ENCFF320CHE',DNASE:astrocyte,,dnase,0, nervous system
+134,b'ENCFF940PZT',DNASE:bronchial epithelial cell female treated with retinoic acid,,dnase,0,lung
+135,b'ENCFF302JEV',DNASE:fibroblast of dermis female adult,,dnase,0,skin
+136,b'ENCFF861ULS',DNASE:foreskin fibroblast male newborn,,dnase,0,foreskin skin
+137,b'ENCFF767YBP',DNASE:keratinocyte female,,dnase,0,skin
+138,b'ENCFF330KHN',DNASE:fibroblast of lung male adult (45 years),,dnase,0,fibroblast
+139,b'ENCFF644NWU',DNASE:NT2/D1,,dnase,0,embryonal carcinoma
+140,b'ENCFF698HGI',DNASE:Panc1,,dnase,0,pancreas adenocarcinoma
+141,b'ENCFF739CBQ',DNASE:epithelial cell of prostate,,dnase,0,prostate
+142,b'ENCFF991YWM',DNASE:RPMI-7951,,dnase,0,"melanoma, skin"
+143,b'ENCFF499KPZ',DNASE:epithelial cell of proximal tubule,,dnase,0,kidney
+144,b'ENCFF827VFY',DNASE:bronchial epithelial cell,,dnase,0,lung
+145,b'ENCFF440XZH',DNASE:SK-N-MC,,dnase,0,neuroepithelioma 
+146,b'ENCFF851VBR',DNASE:SK-N-SH treated with 6 uM all-trans-retinoic acid for 48 hours,,dnase,0,neuroblastoma
+147,b'ENCFF627SBE',DNASE:skeletal muscle cell,,dnase,0,skeletal muscle
+148,b'ENCFF367ZVE',DNASE:T47D,,dnase,0,ductal carcinoma
+149,b'ENCFF479VHW',DNASE:T-helper 1 cell,,dnase,0,t cell
+150,b'ENCFF204BQM',DNASE:T-helper 1 cell female adult (26 years),,dnase,0,t cell
+151,b'ENCFF795TGF',DNASE:T-helper 1 cell male adult (33 years),,dnase,0,t cell
+152,b'ENCFF566QDG',DNASE:T-helper 17 cell,,dnase,0,t cell
+153,b'ENCFF335KDD',DNASE:T-helper 2 cell,,dnase,0,t cell
+154,b'ENCFF768PJS',DNASE:T-helper 2 cell female adult (26 years),,dnase,0,t cell
+155,b'ENCFF438GIW',DNASE:T-helper 2 cell male adult (33 years),,dnase,0,t cell
+156,b'ENCFF313YWE',DNASE:regulatory T cell female adult (35 years),,dnase,0,t cell
+157,b'ENCFF622JVD',DNASE:regulatory T cell male adult (28 years),,dnase,0,t cell
+158,b'ENCFF369NZI',DNASE:WERI-Rb-1,,dnase,0,"retina, eye"
+159,b'ENCFF189ULK',DNASE:WI38 genetically modified using stable transfection originated from WI38 treated with 20 nM afimoxifene for 72 hours,,dnase,0,lung fibroblast
+160,b'ENCFF040DSN',DNASE:WI38 genetically modified using stable transfection originated from WI38,,dnase,0,lung fibroblast
+161,b'ENCFF953AFG',DNASE:HT1080,,dnase,0,fibrosarcoma
+162,b'ENCFF810XTS',DNASE:SK-MEL-5,,dnase,0,"melanoma, skin"
+163,b'ENCFF741DDM',DNASE:SJCRH30,,dnase,0,rhabdomyosarcoma
+164,b'ENCFF143RMC',DNASE:NCI-H460,,dnase,0,lung carcinoma
+165,b'ENCFF989ALW',DNASE:SK-N-DZ treated with dimethyl sulfoxide for 72 hours,,dnase,0,human neuroblastoma
+166,b'ENCFF938XUM',DNASE:GM23338 male adult (53 years) originated from GM23248,,dnase,0,blood lymphoblastoid
+167,b'ENCFF362UJZ',DNASE:lung embryo (112 days),,dnase,0,lung embryo
+168,b'ENCFF820SGC',DNASE:SK-MEL-5,,dnase,0,"melanoma, skin"
+169,b'ENCFF739XXP',DNASE:muscle of back female embryo (113 days),,dnase,0,back muscle
+170,b'ENCFF694RNX',DNASE:iPS DF 4.7 male newborn,,dnase,0,stem cell
+171,b'ENCFF461CDQ',DNASE:right renal cortex interstitium male embryo (105 days),,dnase,0,renal
+172,b'ENCFF498QFP',DNASE:caudate nucleus male adult (78 years),,dnase,1,brain
+173,b'ENCFF245IYM',DNASE:left renal pelvis male embryo (105 days),,dnase,0,renal
+174,b'ENCFF855CJL',DNASE:H9 S1 phase genetically modified using stable transfection,,dnase,0,stem cell
+175,b'ENCFF960UKQ',DNASE:right kidney female embryo (87 days),,dnase,0,kidney
+176,b'ENCFF220RFB',DNASE:Karpas-422,,dnase,0,b-cell lymphoma
+177,b'ENCFF439EFF',"DNASE:CD8-positive, alpha-beta T cell male adult (21 year)",,dnase,0,t cell
+178,b'ENCFF825MFH',DNASE:renal cortex interstitium female embryo (96 days),,dnase,0,renal
+179,b'ENCFF735MKP',DNASE:brain female embryo (85 days),,dnase,1,brain
+180,b'ENCFF920AZN',DNASE:muscle of leg male embryo (97 days),,dnase,0,leg muscle
+181,b'ENCFF577QJI',DNASE:muscle of back female embryo (105 days),,dnase,0,back muscle
+182,b'ENCFF681MHT',DNASE:placenta female embryo (113 days),,dnase,0,placenta
+183,b'ENCFF971NFK',DNASE:foreskin keratinocyte male newborn,,dnase,0,foreskin skin
+184,b'ENCFF842TPR',DNASE:right kidney female embryo (107 days),,dnase,0,kidney
+185,b'ENCFF076JMD',DNASE:RCC 7860,,dnase,0,renal cell carcinoma
+186,b'ENCFF188JVI',DNASE:colon epithelial cell line,,dnase,0,colon
+187,b'ENCFF269PEU',DNASE:left renal cortex interstitium male embryo (120 days),,dnase,0,renal
+188,b'ENCFF400NBT',DNASE:T-cell,,dnase,0,t cell
+189,b'ENCFF304TGP',DNASE:large intestine male embryo (113 days),,dnase,0,large intestine
+190,b'ENCFF999OEJ',DNASE:PC-3,,dnase,0,prostate adenocarcinoma
+191,b'ENCFF813VDR',DNASE:muscle of leg male embryo (96 days),,dnase,0,leg muscle
+192,b'ENCFF613SVD',DNASE:adrenal gland embryo (96 days),,dnase,0,adrenal gland
+193,b'ENCFF519PNO',DNASE:coronary artery female adult (53 years),,dnase,0,coronary artery
+194,b'ENCFF022OWT',DNASE:stomach female embryo (105 days),,dnase,0,stomach
+195,b'ENCFF529MMP',DNASE:muscle of arm female embryo (115 days),,dnase,0,arm muscle
+196,b'ENCFF854MAD',DNASE:heart female embryo (91 day),,dnase,0,heart
+197,b'ENCFF734DOF',DNASE:kidney embryo (80 days),,dnase,0,kidney
+198,b'ENCFF678EIG',DNASE:heart left ventricle female adult (53 years),,dnase,0,heart
+199,b'ENCFF581JDF',DNASE:muscle of back female embryo (98 days),,dnase,0,back muscle
+200,b'ENCFF475YJR',DNASE:lung male embryo (108 days),,dnase,0,lung embryo
+201,b'ENCFF146VLD',DNASE:tibial artery female adult (53 years),,dnase,0,tibial artery
+202,b'ENCFF580LWU',DNASE:adrenal gland male embryo (101 day),,dnase,0,adrenal gland
+203,b'ENCFF192KLJ',DNASE:kidney female embryo (121 day),,dnase,0,kidney
+204,b'ENCFF534VWZ',DNASE:stomach female embryo (107 days),,dnase,0,stomach
+205,b'ENCFF343DFM',DNASE:small intestine female embryo (110 days),,dnase,0,small intestine
+206,b'ENCFF723FDT',DNASE:MG63,,dnase,0,osteosarcoma
+207,b'ENCFF792NVL',DNASE:skin of body female embryo (82 days),,dnase,0,skin
+208,b'ENCFF617ONE',DNASE:left renal cortex interstitium male embryo (105 days),,dnase,0,renal
+209,b'ENCFF873DWP',DNASE:stomach male embryo (58 days) and male embryo (76 days),,dnase,0,stomach
+210,b'ENCFF862JVF',DNASE:left kidney female embryo (59 days) and male embryo (91 day),,dnase,0,kidney
+211,b'ENCFF996GHG',DNASE:hematopoietic multipotent progenitor cell,,dnase,0,blood
+212,b'ENCFF969UJW',DNASE:kidney female embryo (120 days),,dnase,0,kidney
+213,b'ENCFF413KYW',DNASE:muscle of back female embryo (115 days),,dnase,0,back muscle
+214,b'ENCFF771PWA',"DNASE:hematopoietic multipotent progenitor cell male adult (25 years) treated with erythropoietin for 20 days, hydrocortisone succinate for 20 days, kit ligand for 20 days, interleukin-3 for 20 days",,dnase,0,blood
+215,b'ENCFF671BMS',DNASE:small intestine female embryo (120 days),,dnase,0,small intestine
+216,b'ENCFF657KLL',DNASE:brain embryo (112 days),,dnase,1,brain
+217,b'ENCFF424IXN',DNASE:stomach female embryo (105 days),,dnase,0,stomach
+218,b'ENCFF415LNY',DNASE:left kidney female embryo (98 days),,dnase,0,kidney
+219,b'ENCFF248OBP',DNASE:trophoblast cell embryo (21 week),,dnase,0,placenta
+220,b'ENCFF328DCV',"DNASE:common myeloid progenitor, CD34-positive female adult (27 years)",,dnase,0,blood
+221,b'ENCFF681KGX',DNASE:eye female embryo (76 days),,dnase,0,eye
+222,b'ENCFF332EJM',DNASE:renal cortex interstitium male embryo (108 days),,dnase,0,renal
+223,b'ENCFF987HVM',DNASE:placenta female embryo (108 days),,dnase,0,placenta
+224,b'ENCFF922TBR',DNASE:stomach female adult (53 years),,dnase,0,stomach
+225,b'ENCFF209YFM',DNASE:small intestine female embryo (107 days),,dnase,0,small intestine
+226,b'ENCFF811EUQ',DNASE:large intestine female embryo (120 days),,dnase,0,large intestine
+227,b'ENCFF798YGS',DNASE:kidney glomerular epithelial cell male adult (43 years) and male adult (62 years),,dnase,0,kidney
+228,b'ENCFF319GAX',DNASE:renal pelvis female embryo (96 days),,dnase,0,renal
+229,b'ENCFF083VCD',DNASE:lung female embryo (76 days),,dnase,0,lung
+230,b'ENCFF044CTX',DNASE:muscle of back male embryo (104 days),,dnase,0,back muscle
+231,b'ENCFF899HCF',DNASE:lung female embryo (85 days),,dnase,0,lung embryo
+232,b'ENCFF085EFX',DNASE:spinal cord male embryo (105 days),,dnase,0,spinal cord
+233,b'ENCFF833WVM',"DNASE:hematopoietic multipotent progenitor cell treated with interleukin-3 for 4 days, kit ligand for 4 days, hydrocortisone succinate for 4 days, erythropoietin for 4 days",,dnase,0,blood
+234,b'ENCFF577SOF',DNASE:HepG2,,dnase,0,liver carcinoma
+235,b'ENCFF366GCX',DNASE:foreskin fibroblast male newborn,,dnase,0,foreskin fibroblast
+236,b'ENCFF575XEK',DNASE:omental fat pad female adult (53 years),,dnase,0,adipose tissue
+237,b'ENCFF207LXN',DNASE:large intestine female embryo (110 days),,dnase,0,large intestine
+238,b'ENCFF604EJP',DNASE:heart female embryo (105 days),,dnase,0,heart
+239,b'ENCFF365HVU',DNASE:renal cortex interstitium male embryo (113 days),,dnase,0,renal
+240,b'ENCFF064KBT',DNASE:brain female embryo (96 days),,dnase,1,brain
+241,b'ENCFF677VKI',DNASE:thyroid gland male adult (37 years),,dnase,0,thyroid
+242,b'ENCFF068ZBX',DNASE:liver embryo (59 days) and embryo (80 days),,dnase,0,liver
+243,b'ENCFF288HWP',DNASE:stomach male adult (54 years),,dnase,0,stomach
+244,b'ENCFF921GFL',DNASE:thymus male embryo (127 days),,dnase,0,thymus
+245,b'ENCFF414NAA',DNASE:upper lobe of left lung male adult (37 years),,dnase,0,lung
+246,b'ENCFF131GBV',DNASE:endodermal cell,,dnase,0,endoderm
+247,b'ENCFF016KEV',DNASE:forelimb muscle female embryo (108 days),,dnase,0,forelimb muscle
+248,b'ENCFF522NPH',"DNASE:CD4-positive, alpha-beta T cell male adult (37 years)",,dnase,0,t cell
+249,b'ENCFF858BSX',DNASE:muscle of leg male embryo (101 day),,dnase,0,leg muscle
+250,b'ENCFF161KLK',DNASE:gastrocnemius medialis male adult (37 years),,dnase,0,calf muscle
+251,b'ENCFF073UDC',DNASE:gastrocnemius medialis male adult (54 years),,dnase,0,calf muscle
+252,b'ENCFF362OUW',DNASE:stomach male embryo (91 day),,dnase,0,stomach
+253,b'ENCFF499LIJ',DNASE:muscle of back male embryo (101 day),,dnase,0,back muscle
+254,b'ENCFF008DNO',DNASE:heart female embryo (117 days),,dnase,0,heart
+255,b'ENCFF294LJN',DNASE:kidney tubule cell female adult (80 years) and male adult (62 years),,dnase,0,kidney
+256,b'ENCFF433QRU',DNASE:fibroblast of skin of abdomen male embryo (97 days),,dnase,0,fibroblast
+257,b'ENCFF230OUF',DNASE:pancreas male adult (34 years),,dnase,0,pancreas
+258,b'ENCFF532VGP',DNASE:trophoblast cell originated from H1-hESC,,dnase,0,stem cell
+259,b'ENCFF401OYD',DNASE:left kidney male embryo (96 days),,dnase,0,kidney
+260,b'ENCFF338NJM',DNASE:skin fibroblast male embryo (97 days),,dnase,0,skin fibroblast
+261,b'ENCFF378OWK',DNASE:brain female embryo (142 days),,dnase,1,brain
+262,b'ENCFF687KFN',DNASE:small intestine male embryo (105 days),,dnase,0,small intestine
+263,b'ENCFF509TTX',DNASE:heart female embryo (110 days),,dnase,0,heart
+264,b'ENCFF103KGP',"DNASE:common myeloid progenitor, CD34-positive female",,dnase,0,bone marrow
+265,b'ENCFF452CPH',DNASE:adrenal gland male adult (37 years),,dnase,0,adrenal gland
+266,b'ENCFF748UWO',DNASE:muscle of back female embryo (85 days),,dnase,0,back muscle
+267,b'ENCFF875TFI',DNASE:muscle of leg female embryo (85 days),,dnase,0,leg muscle
+268,b'ENCFF340RUK',DNASE:Peyer's patch male adult (54 years),,dnase,0,"peyer patch, lymphoid tissue in small intestine"
+269,b'ENCFF410CYG',DNASE:amniotic stem cell,,dnase,0,amniotic stem cell
+270,b'ENCFF978RWQ',DNASE:stomach female embryo (98 days),,dnase,0,stomach
+271,b'ENCFF584GYN',DNASE:large intestine female embryo (91 day),,dnase,0,large intestine
+272,b'ENCFF029QDT',DNASE:lung female embryo (120 days),,dnase,0,lung
+273,b'ENCFF285PVN',DNASE:skin fibroblast male embryo (97 days),,dnase,0,skin fibroblast
+274,b'ENCFF726FED',DNASE:SW480,,dnase,0,colon adenocarcinoma
+275,b'ENCFF711EJL',DNASE:GM23248,,dnase,0,lymphoblastoid
+276,b'ENCFF484VHZ',DNASE:muscle of trunk female embryo (120 days),,dnase,0,trunk muscle
+277,b'ENCFF639JCH',DNASE:islet precursor cell,,dnase,0,pancreas
+278,b'ENCFF151SBP',DNASE:medulla oblongata male adult (78 years) and male adult (84 years),,dnase,1,brain
+279,b'ENCFF640UAZ',DNASE:right lung male embryo (115 days),,dnase,0,lung
+280,b'ENCFF102SIK',DNASE:body of pancreas male adult (54 years),,dnase,0,pancreas
+281,b'ENCFF227VUS',DNASE:mammary epithelial cell female adult (18 years),,dnase,0,mammary gland
+282,b'ENCFF082TEM',DNASE:gastrocnemius medialis female adult (51 year),,dnase,0,calf muscle
+283,b'ENCFF037DUA',DNASE:uterus female adult (53 years),,dnase,0,uterus
+284,b'ENCFF818DSK',DNASE:ELR,,dnase,0,unknown
+285,b'ENCFF037ZSW',DNASE:omental fat pad female adult (51 year),,dnase,0,adipose tissue
+286,b'ENCFF280CMC',DNASE:stomach male child (3 years),,dnase,0,stomach
+287,b'ENCFF570XSN',DNASE:B cell male adult (37 years),,dnase,0,b cell
+288,b'ENCFF113YFF',DNASE:foreskin fibroblast male newborn,,dnase,0,foreskin fibroblast
+289,b'ENCFF981AOU',DNASE:renal cortex interstitium male embryo (91 day),,dnase,0,renal
+290,b'ENCFF828TLX',DNASE:ACHN,,dnase,0,renal adenocarcinoma
+291,b'ENCFF054DND',DNASE:kidney tubule cell female adult (80 years) treated with 5 uM cisplatin,,dnase,0,kidney
+292,b'ENCFF468WHL',DNASE:left renal pelvis male embryo (105 days),,dnase,0,renal
+293,b'ENCFF669AED',DNASE:iPS DF 6.9 male newborn,,dnase,0,stem cell
+294,b'ENCFF369CRG',DNASE:kidney male embryo (87 days),,dnase,0,kidney
+295,b'ENCFF784RSW',DNASE:right lung female embryo (91 day),,dnase,0,lung
+296,b'ENCFF564MGY',DNASE:NCI-H226,,dnase,0,lung adenocarcinoma
+297,b'ENCFF973VII',DNASE:right renal cortex interstitium male embryo (105 days),,dnase,0,renal
+298,b'ENCFF006KSE',DNASE:G401,,dnase,0,kidney nephroblastoma
+299,b'ENCFF789PQN',DNASE:muscle of arm male embryo (113 days),,dnase,0,arm muscle
+300,b'ENCFF992LZL',"DNASE:common myeloid progenitor, CD34-positive male adult",,dnase,0,bone marrow
+301,b'ENCFF716VIS',DNASE:muscle of leg female embryo (113 days),,dnase,0,leg muscle
+302,b'ENCFF430CNF',DNASE:arm bone male embryo (81 day),,dnase,0,arm bone
+303,b'ENCFF334GMP',DNASE:H9,,dnase,0,stem cell
+304,b'ENCFF639ZOF',DNASE:testis male embryo,,dnase,0,testis
+305,b'ENCFF372SLF',DNASE:neural stem progenitor cell originated from H1-hESC,,dnase,0,neural stem cell tissue
+306,b'ENCFF312ZWZ',DNASE:right atrium auricular region female adult (51 year),,dnase,0,heart
+307,b'ENCFF819IOM',"DNASE:common myeloid progenitor, CD34-positive male adult (49 years)",,dnase,0,bone marrow
+308,b'ENCFF688EZK',DNASE:stomach female embryo (121 day),,dnase,0,stomach
+309,b'ENCFF502QQC',DNASE:muscle of leg female embryo (105 days),,dnase,0,leg muscle
+310,b'ENCFF674WBH',DNASE:muscle of leg male embryo (97 days),,dnase,0,leg muscle
+311,b'ENCFF541UPO',DNASE:left kidney female embryo (87 days),,dnase,0,kidney
+312,b'ENCFF034GYI',DNASE:muscle of back male embryo (97 days),,dnase,0,back muscle
+313,b'ENCFF160KJF',DNASE:muscle of leg male embryo (96 days),,dnase,0,leg muscle
+314,b'ENCFF071LJS',DNASE:right lung female embryo (105 days),,dnase,0,lung
+315,b'ENCFF193BCL',DNASE:NAMALWA treated with Sendai virus for 2 hours,,dnase,0,lymphoma
+316,b'ENCFF964WUW',DNASE:renal pelvis male embryo (127 days),,dnase,0,renal
+317,b'ENCFF736ZAN',DNASE:muscle of arm male embryo (96 days),,dnase,0,arm muscle
+318,b'ENCFF064YHT',DNASE:heart male child (3 years),,dnase,0,heart
+319,b'ENCFF536FNG',DNASE:brain female embryo (117 days),,dnase,1,brain
+320,b'ENCFF428DTK',DNASE:muscle of arm female embryo (85 days),,dnase,0,arm muscle
+321,b'ENCFF782WKY',DNASE:heart male embryo (110 days),,dnase,0,heart
+322,b'ENCFF464NHA',DNASE:L1-S8,,dnase,0,unknown
+323,b'ENCFF468PTJ',"DNASE:CD8-positive, alpha-beta T cell male adult (37 years)",,dnase,0,t cell
+324,b'ENCFF847HLP',DNASE:muscle of back male embryo (91 day),,dnase,0,back muscle
+325,b'ENCFF637LBX',DNASE:left renal pelvis male embryo (105 days),,dnase,0,renal
+326,b'ENCFF751LHL',DNASE:middle frontal gyrus male adult (78 years),,dnase,1,brain
+327,b'ENCFF267BLE',DNASE:lung male embryo (103 days),,dnase,0,lung
+328,b'ENCFF915OOI',DNASE:heart male embryo (105 days),,dnase,0,heart
+329,b'ENCFF688UBR',DNASE:left renal pelvis male embryo (120 days),,dnase,0,renal
+330,b'ENCFF570PTC',"DNASE:common myeloid progenitor, CD34-positive female adult (50 years)",,dnase,0,bone marrow
+331,b'ENCFF137XIB',DNASE:Peyer's patch female adult (53 years),,dnase,0,"peyer patch, lymphoid tissue in small intestine"
+332,b'ENCFF123ENC',DNASE:skin fibroblast male embryo (97 days),,dnase,0,skin fibroblast
+333,b'ENCFF158ALT',DNASE:hematopoietic multipotent progenitor cell,,dnase,0,blood
+334,b'ENCFF386DMJ',DNASE:right kidney male embryo (87 days),,dnase,0,kidney
+335,b'ENCFF367MHB',DNASE:tibial artery male adult (37 years),,dnase,0,tibial artery
+336,b'ENCFF620RYJ',DNASE:renal cell carcinoma,,dnase,0,renal cell carcinoma
+337,b'ENCFF936MHE',DNASE:thymus female embryo (113 days),,dnase,0,thymus
+338,b'ENCFF003FBE',DNASE:brain female embryo (109 days),,dnase,1,brain
+339,b'ENCFF399TJD',DNASE:Daoy,,dnase,0,medulloblastoma 
+340,b'ENCFF305GOM',DNASE:A673,,dnase,0,ewing sarcoma cell line
+341,b'ENCFF147PGS',DNASE:muscle of arm male embryo (101 day),,dnase,0,arm muscle
+342,b'ENCFF941ILF',DNASE:muscle of arm female embryo (120 days),,dnase,0,arm muscle
+343,b'ENCFF779BIA',DNASE:muscle of back male embryo (105 days),,dnase,0,back muscle
+344,b'ENCFF647YEC',DNASE:skin fibroblast male embryo (97 days),,dnase,0,skin fibroblast
+345,b'ENCFF095HIQ',DNASE:ecto neural progenitor cell originated from H9,,dnase,0,neural stem cell tissue
+346,b'ENCFF708ZHA',"DNASE:hematopoietic multipotent progenitor cell treated with interleukin-3 for 17 days, kit ligand for 17 days, hydrocortisone succinate for 17 days, erythropoietin for 17 days",,dnase,0,bone marrow
+347,b'ENCFF136YOJ',DNASE:hepatocyte originated from H9,,dnase,0,liver
+348,b'ENCFF078RPO',DNASE:renal pelvis male embryo (97 days),,dnase,0,renal
+349,b'ENCFF802UAF',DNASE:heart embryo (101 day),,dnase,0,heart
+350,b'ENCFF761ZJC',DNASE:large intestine male embryo (115 days),,dnase,0,large intestine
+351,b'ENCFF010ZNC',DNASE:T-cell male adult (37 years),,dnase,0,t-cell
+352,b'ENCFF053JYY',DNASE:skin fibroblast male embryo (97 days),,dnase,0,skin fibroblast
+353,b'ENCFF259NLK',DNASE:CD1c-positive myeloid dendritic cell,,dnase,0,lymphoid tissue or blood
+354,b'ENCFF220IWU',DNASE:B cell male adult (21 year),,dnase,0,b cell
+355,b'ENCFF029ZOX',DNASE:superior temporal gyrus male adult (84 years),,dnase,1,brain
+356,b'ENCFF801JJS',DNASE:skin fibroblast male embryo (97 days),,dnase,0,skin
+357,b'ENCFF294LWY',DNASE:iPS DF 19.11 male newborn,,dnase,0,stem cell
+358,b'ENCFF973KXU',DNASE:hindlimb muscle male embryo (120 days),,dnase,0,hindlimb muscle
+359,b'ENCFF955DHP',DNASE:MCF 10A treated with 1 uM tamoxifen for 6 hours,,dnase,0,breast
+360,b'ENCFF017NBX',DNASE:sigmoid colon male adult (54 years),,dnase,0,sigmoid colon
+361,b'ENCFF851MCI',DNASE:heart male embryo (120 days),,dnase,0,heart
+362,b'ENCFF083ELT',DNASE:tibial nerve female adult (51 year),,dnase,0,nerve
+363,b'ENCFF531MYW',DNASE:adipocyte,,dnase,0,adipose tissue
+364,b'ENCFF562EUF',DNASE:muscle of trunk female embryo (121 day),,dnase,0,trunk muscle
+365,b'ENCFF920CTO',DNASE:left cardiac atrium female embryo (101 day),,dnase,0,heart
+366,b'ENCFF213QWE',DNASE:T-cell male adult (21 year),,dnase,0,t-cell
+367,b'ENCFF645BQM',DNASE:right kidney male embryo (108 days),,dnase,0,kidney
+368,b'ENCFF166VWE',DNASE:adrenal gland female embryo (108 days),,dnase,0,adrenal
+369,b'ENCFF121CVF',"DNASE:hematopoietic multipotent progenitor cell treated with interleukin-3 for 11 day, kit ligand for 11 day, hydrocortisone succinate for 11 day, erythropoietin for 11 day",,dnase,0,blood
+370,b'ENCFF947HEA',DNASE:brain male embryo (105 days),,dnase,1,brain
+371,b'ENCFF116YEY',DNASE:body of pancreas female adult (53 years),,dnase,0,pancreas
+372,b'ENCFF963ION',DNASE:left kidney female embryo (147 days),,dnase,0,left kidney
+373,b'ENCFF133LMW',"DNASE:CD4-positive, alpha-beta T cell male adult (37 years)",,dnase,0,t cell
+374,b'ENCFF953EXS',DNASE:KBM-7,,dnase,0,leukemia
+375,b'ENCFF241XMS',DNASE:psoas muscle male child (3 years),,dnase,0,psoas muscle
+376,b'ENCFF190AUQ',DNASE:ovary female embryo,,dnase,0,ovary
+377,b'ENCFF175IFH',DNASE:RKO,,dnase,0,colorectal carcinoma
+378,b'ENCFF869XYK',DNASE:leg bone male embryo (81 day),,dnase,0,bone
+379,b'ENCFF479JXO',DNASE:glomerular visceral epithelial cell child (3 years),,dnase,0,kidney
+380,b'ENCFF520XMG',DNASE:foreskin melanocyte male newborn,,dnase,0,foreskin skin
+381,b'ENCFF249WKV',DNASE:embryonic facial prominence embryo (53 days) and embryo (58 days),,dnase,0,embryo
+382,b'ENCFF154NSS',DNASE:vagina female adult (53 years),,dnase,0,vagina
+383,b'ENCFF890HSZ',DNASE:kidney female embryo (85 days),,dnase,0,kidney
+384,b'ENCFF990QEC',DNASE:muscle of back male embryo (96 days),,dnase,0,back muscle
+385,b'ENCFF736QYT',DNASE:muscle of trunk female embryo (113 days),,dnase,0,trunk muscle
+386,b'ENCFF732WSQ',DNASE:iPS DF 19.7 male newborn,,dnase,0,stem cell
+387,b'ENCFF631ZXV',DNASE:right lung female embryo (110 days),,dnase,0,lung embryo
+388,b'ENCFF216TLU',DNASE:left lung male embryo (87 days),,dnase,0,lung embryo
+389,b'ENCFF471TWL',DNASE:large intestine female embryo (105 days),,dnase,0,large intestine
+390,b'ENCFF338GCP',DNASE:right lung female embryo (98 days),,dnase,0,lung embryo
+391,b'ENCFF573KUK',DNASE:leg bone male embryo (81 day),,dnase,0,leg bone
+392,b'ENCFF724HAH',DNASE:CD14-positive monocyte male adult (21 year),,dnase,0,white blood cell
+393,b'ENCFF897JFY',DNASE:muscle of arm male embryo (120 days),,dnase,0,arm muscle
+394,b'ENCFF799HNC',DNASE:Peyer's patch male adult (37 years),,dnase,0,small intestine
+395,b'ENCFF139ZYV',"DNASE:common myeloid progenitor, CD34-positive male adult (36 years)",,dnase,0,stem cell
+396,b'ENCFF549BSX',DNASE:left lung female embryo (108 days),,dnase,0,lung embryo
+397,b'ENCFF359LKO',DNASE:small intestine female embryo (91 day),,dnase,0,small intestine
+398,b'ENCFF896FUI',DNASE:MM.1S,,dnase,0,multiple myeloma
+399,b'ENCFF410TTD',DNASE:sigmoid colon female adult (51 year),,dnase,0,sigmoid colon
+400,b'ENCFF852RDH',DNASE:left lung female embryo (105 days),,dnase,0,lung embryo
+401,b'ENCFF523VFS',"DNASE:common myeloid progenitor, CD34-positive female adult (33 years)",,dnase,0,stem cell
+402,b'ENCFF773NZF',DNASE:retina embryo (125 days) and male embryo (103 days),,dnase,0,retina
+403,b'ENCFF468SMI',DNASE:brain male embryo (72 days) and male embryo (76 days),,dnase,1,brain
+404,b'ENCFF302BVR',DNASE:muscle of back male embryo (108 days),,dnase,0,back muscle
+405,b'ENCFF706WOH',DNASE:IMR-90,,dnase,0,lung fibroblast
+406,b'ENCFF036RHD',DNASE:lung female embryo (108 days),,dnase,0,lung embryo
+407,b'ENCFF877ULZ',DNASE:left lung male embryo (113 days),,dnase,0,lung embryo
+408,b'ENCFF506FHA',DNASE:OCI-LY7,,dnase,0,b-cell lymphoma
+409,b'ENCFF300WUQ',DNASE:upper lobe of left lung female adult (51 year),,dnase,0,lung
+410,b'ENCFF117DAB',"DNASE:hematopoietic multipotent progenitor cell treated with interleukin-3 for 18 days, kit ligand for 18 days, hydrocortisone succinate for 18 days, erythropoietin for 18 days",,dnase,0,blood
+411,b'ENCFF681JFJ',DNASE:putamen male adult (78 years),,dnase,1,brain
+412,b'ENCFF893ONO',"DNASE:common myeloid progenitor, CD34-positive male adult (42 years)",,dnase,0,stem cell
+413,b'ENCFF555ENQ',DNASE:placenta embryo (53 days),,dnase,0,placenta
+414,b'ENCFF758ZBZ',DNASE:kidney male embryo (105 days),,dnase,0,kidney
+415,b'ENCFF185JEB',DNASE:heart left ventricle female embryo (136 days),,dnase,0,heart
+416,b'ENCFF966IYT',DNASE:small intestine female embryo (108 days),,dnase,0,small intestine
+417,b'ENCFF692FQU',DNASE:LoVo,,dnase,0,colorectal adenocarcinoma
+418,b'ENCFF564DYF',DNASE:cerebellar cortex male adult (78 years) and male adult (84 years),,dnase,1,brain
+419,b'ENCFF710LQM',DNASE:lung embryo (67 days),,dnase,0,lung embryo
+420,b'ENCFF413EKZ',DNASE:transverse colon female adult (53 years),,dnase,0,transverse colon
+421,b'ENCFF482UKP',DNASE:brain embryo (80 days),,dnase,1,brain
+422,b'ENCFF922XNR',DNASE:stomach female embryo (108 days),,dnase,0,stomach
+423,b'ENCFF622CII',DNASE:umbilical cord embryo (59 days) and male embryo (76 days),,dnase,0,umbilical cord
+424,b'ENCFF683HAF',DNASE:muscle of leg male embryo (105 days),,dnase,0,leg muscle
+425,b'ENCFF109WQI',DNASE:Caki2,,dnase,0,renal carcinoma
+426,b'ENCFF644WCO',DNASE:muscle of arm female embryo (105 days),,dnase,0,arm muscle
+427,b'ENCFF910FZX',DNASE:foreskin melanocyte male newborn,,dnase,0,foreskin
+428,b'ENCFF450EHI',DNASE:stomach male embryo (108 days),,dnase,0,stomach
+429,b'ENCFF381POQ',DNASE:body of pancreas male adult (37 years),,dnase,0,pancreas
+430,b'ENCFF631XBY',DNASE:renal cortex interstitium female embryo (120 days),,dnase,0,renal
+431,b'ENCFF095KFF',DNASE:body of pancreas female adult (51 year),,dnase,0,pancreas
+432,b'ENCFF824OUT',DNASE:large intestine male embryo (105 days),,dnase,0,large intestine
+433,b'ENCFF850IPE',DNASE:limb embryo (58 days) and embryo (59 days),,dnase,0,limb
+434,b'ENCFF461COG',DNASE:heart female embryo (147 days),,dnase,0,heart
+435,b'ENCFF135BIN',DNASE:heart male embryo (96 days),,dnase,0,heart
+436,b'ENCFF785TYR',DNASE:right renal pelvis male embryo (120 days),,dnase,0,renal
+437,b'ENCFF149IUC',DNASE:left lung female embryo (117 days),,dnase,0,lung embryo
+438,b'ENCFF858RAV',DNASE:thymus female embryo (98 days),,dnase,0,thymus
+439,b'ENCFF802LRO',DNASE:ovary female adult (53 years),,dnase,0,ovary
+440,b'ENCFF925SLC',DNASE:left kidney male embryo (115 days),,dnase,0,left kidney
+441,b'ENCFF527VFR',DNASE:thymus male embryo (113 days),,dnase,0,thymus
+442,b'ENCFF176WVA',DNASE:placenta female embryo (105 days),,dnase,0,placenta
+443,b'ENCFF746DZE',DNASE:EH,,dnase,0,colorectal carcinoma
+444,b'ENCFF354FAY',DNASE:renal cortex interstitium male embryo (97 days),,dnase,0,renal
+445,b'ENCFF933ZHA',DNASE:placenta embryo (102 days),,dnase,0,placenta
+446,b'ENCFF708XRO',DNASE:placenta embryo (56 days) and embryo (59 days),,dnase,0,placenta
+447,b'ENCFF407LCA',DNASE:renal pelvis female embryo (103 days),,dnase,0,renal
+448,b'ENCFF462ZLK',DNASE:right lobe of liver female adult (53 years),,dnase,0,liver
+449,b'ENCFF660PED',DNASE:skin fibroblast male embryo (97 days),,dnase,0,skin
+450,b'ENCFF616AAF',DNASE:tongue male embryo (72 days),,dnase,0,tongue
+451,b'ENCFF723EYP',DNASE:skin fibroblast male embryo (97 days),,dnase,0,skin
+452,b'ENCFF775FBE',DNASE:liver female embryo (101 day) and female embryo (113 days),,dnase,0,liver
+453,b'ENCFF658BNW',DNASE:large intestine female embryo (107 days),,dnase,0,large intestine
+454,b'ENCFF438MEL',"DNASE:hematopoietic multipotent progenitor cell treated with interleukin-3 for 6 days, kit ligand for 6 days, hydrocortisone succinate for 6 days, erythropoietin for 6 days",,dnase,0,blood
+455,b'ENCFF819VID',"DNASE:common myeloid progenitor, CD34-positive male",,dnase,0,stem cell
+456,b'ENCFF389EEG',DNASE:small intestine female embryo (98 days),,dnase,0,small intestine
+457,b'ENCFF658FXQ',"DNASE:CD4-positive, alpha-beta T cell male adult (21 year)",,dnase,0,t-cell
+458,b'ENCFF503ZTL',DNASE:brain male embryo (101 day),,dnase,1,brain
+459,b'ENCFF124SMB',DNASE:placenta female embryo (101 day) and male embryo (105 days),,dnase,0,placenta
+460,b'ENCFF069WLL',DNASE:renal pelvis male embryo (91 day),,dnase,0,renal
+461,b'ENCFF830TGU',DNASE:lung embryo (80 days) and male embryo (76 days),,dnase,0,lung embryo
+462,b'ENCFF460VUW',DNASE:Ammon's horn male adult (84 years),,dnase,1,brain
+463,b'ENCFF596JMX',DNASE:muscle of back female embryo (105 days),,dnase,0,back muscle
+464,b'ENCFF606ESZ',DNASE:lung male embryo (82 days),,dnase,0,lung embryo
+465,b'ENCFF946AQO',DNASE:left renal cortex interstitium male embryo (105 days),,dnase,0,renal
+466,b'ENCFF925UKW',DNASE:trophoblast cell embryo (17 weeks) and embryo (18 weeks),,dnase,0,trophoblast
+467,b'ENCFF548BBX',DNASE:RPMI8226,,dnase,0,multiple myeloma
+468,b'ENCFF243OFZ',DNASE:small intestine male embryo (91 day),,dnase,0,small intestine
+469,b'ENCFF641HVS',DNASE:brain embryo (56 days) and male embryo (58 days),,dnase,1,brain
+470,b'ENCFF158QOY',DNASE:pancreas female adult (30 years),,dnase,0,pancreas
+471,b'ENCFF080JZX',DNASE:adrenal gland female adult (53 years),,dnase,0,adrenal
+472,b'ENCFF322ALX',DNASE:breast epithelium female adult (51 year),,dnase,0,breast
+473,b'ENCFF028YSP',DNASE:left kidney male embryo (87 days),,dnase,0,kidney
+474,b'ENCFF010FIA',DNASE:renal pelvis female embryo (96 days),,dnase,0,renal
+475,b'ENCFF581JYZ',DNASE:stomach male embryo (127 days),,dnase,0,stomach
+476,b'ENCFF726GTU',"DNASE:CD8-positive, alpha-beta T cell female adult (34 years)",,dnase,0,t-cell
+477,b'ENCFF599PVD',DNASE:spinal cord female embryo (89 days),,dnase,0,spinal cord
+478,b'ENCFF174TXJ',DNASE:muscle of arm male embryo (97 days),,dnase,0,arm muscle
+479,b'ENCFF161NZJ',DNASE:renal pelvis female embryo (105 days),,dnase,0,renal
+480,b'ENCFF442SRX',DNASE:HAP-1,,dnase,0,leukemia
+481,b'ENCFF909HEZ',DNASE:SJSA1,,dnase,0,osteosarcoma
+482,b'ENCFF113RRS',DNASE:retina embryo (74 days) and embryo (85 days),,dnase,0,retina
+483,b'ENCFF906KHN',DNASE:muscle of leg male embryo (127 days),,dnase,0,leg muscle
+484,b'ENCFF900LOG',DNASE:fibroblast of skin of abdomen male embryo (97 days),,dnase,0,skin
+485,b'ENCFF399ISP',DNASE:bipolar neuron originated from GM23338 treated with 0.5 ug/mL doxycycline hyclate for 4 days,,dnase,0,neuron
+486,b'ENCFF138ZHG',DNASE:stomach female embryo (147 days),,dnase,0,stomach
+487,b'ENCFF969AND',DNASE:lung male embryo (54 days) and male embryo (58 days),,dnase,0,lung embryo
+488,b'ENCFF508ADO',DNASE:T-cell male adult (36 years),,dnase,0,t cell
+489,b'ENCFF801DBL',DNASE:T-cell male adult (21 year),,dnase,0,t cell
+490,b'ENCFF401DZU',DNASE:HK-2,,dnase,0,kidney
+491,b'ENCFF673ICX',DNASE:NCI-H460,,dnase,0,non small cell lung cancer
+492,b'ENCFF655RAK',DNASE:left lung male embryo (96 days),,dnase,0,lung embryo
+493,b'ENCFF005DPL',"DNASE:common myeloid progenitor, CD34-positive male adult (23 years)",,dnase,0,stem cell
+494,b'ENCFF766YIL',DNASE:stomach female adult (51 year),,dnase,0,stomach
+495,b'ENCFF502EPK',"DNASE:CD4-positive, alpha-beta T cell female adult (33 years)",,dnase,0,t cell
+496,b'ENCFF740DGO',DNASE:kidney female embryo (113 days),,dnase,0,kidney
+497,b'ENCFF600WZF',DNASE:skin fibroblast male embryo (97 days),,dnase,0,skin
+498,b'ENCFF180IFD',DNASE:placenta female embryo (85 days),,dnase,0,placenta
+499,b'ENCFF361UTR',DNASE:brain male embryo (122 days),,dnase,1,brain
+500,b'ENCFF903LEE',DNASE:muscle of arm male embryo (97 days),,dnase,0,arm muscle
+501,b'ENCFF161UUJ',DNASE:renal cortex interstitium female embryo (103 days),,dnase,0,renal
+502,b'ENCFF126DFR',DNASE:thyroid gland female adult (51 year),,dnase,0,thyroid
+503,b'ENCFF889CMZ',DNASE:NAMALWA,,dnase,0,b cell
+504,b'ENCFF351UQV',DNASE:heart embryo (59 days) and female embryo (76 days),,dnase,0,heart
+505,b'ENCFF365LXQ',DNASE:large intestine male embryo (105 days),,dnase,0,large intestine
+506,b'ENCFF260OFK',DNASE:skin fibroblast male embryo (97 days),,dnase,0,skin
+507,b'ENCFF307BRD',DNASE:right kidney male embryo (96 days),,dnase,0,kidney
+508,b'ENCFF722MXM',DNASE:CD14-positive monocyte male adult (37 years),,dnase,0,white blood cell
+509,b'ENCFF422YYH',DNASE:ELF-1,,dnase,0,t cell
+510,b'ENCFF024WMP',DNASE:spinal cord female embryo (113 days),,dnase,0,spinal cord
+511,b'ENCFF090EZE',DNASE:spleen embryo (112 days),,dnase,0,spleen
+512,b'ENCFF010TXA',DNASE:left lung female embryo (107 days),,dnase,0,lung embryo
+513,b'ENCFF538SYZ',DNASE:thymus female embryo,,dnase,0,thymus
+514,b'ENCFF131RGB',"DNASE:CD4-positive, alpha-beta T cell male adult (21 year)",,dnase,0,t cell
+515,b'ENCFF827CLR',DNASE:stomach female embryo (96 days),,dnase,0,stomach
+516,b'ENCFF923JHL',DNASE:EL,,dnase,0,EL cell line
+517,b'ENCFF759CKK',DNASE:CD14-positive monocyte female adult (34 years),,dnase,0,white blood cell
+518,b'ENCFF290ZJP',DNASE:thyroid gland female adult (53 years),,dnase,0,thyroid
+519,b'ENCFF815MQN',DNASE:adrenal gland female embryo (113 days),,dnase,0,adrenal
+520,b'ENCFF545YJA',DNASE:muscle of back male embryo (96 days),,dnase,0,back muscle
+521,b'ENCFF332XCB',DNASE:SJCRH30,,dnase,0,rhabdomyosarcoma
+522,b'ENCFF985WGD',DNASE:natural killer cell male adult (21 year),,dnase,0,immune
+523,b'ENCFF702IWR',DNASE:heart male embryo (72 days) and male embryo (76 days),,dnase,0,heart
+524,b'ENCFF225GCE',DNASE:midbrain male adult (78 years) and male adult (84 years),,dnase,1,brain
+525,b'ENCFF338CIA',DNASE:ovary female adult (30 years),,dnase,0,ovary
+526,b'ENCFF918FRW',DNASE:mesendoderm originated from H1-hESC,,dnase,0,stem cell
+527,b'ENCFF104JJN',DNASE:natural killer cell male adult (37 years),,dnase,0,immune
+528,b'ENCFF125SYT',DNASE:natural killer cell female adult (34 years),,dnase,0,immune
+529,b'ENCFF380PKB',DNASE:foreskin keratinocyte male newborn,,dnase,0,foreskin skin
+530,b'ENCFF488GEQ',DNASE:stomach female embryo,,dnase,0,stomach
+531,b'ENCFF285UPE',DNASE:adrenal gland male embryo (108 days),,dnase,0,adrenal
+532,b'ENCFF037YBR',DNASE:testis male embryo,,dnase,0,testis
+533,b'ENCFF594UFP',DNASE:mesenchymal stem cell originated from H1-hESC,,dnase,0,stem cell
+534,b'ENCFF264JCE',DNASE:vagina female adult (51 year),,dnase,0,vagina
+535,b'ENCFF158JPG',"DNASE:common myeloid progenitor, CD34-positive male adult (43 years)",,dnase,0,stem cell
+536,b'ENCFF062BSK',DNASE:heart right ventricle female embryo (101 day) and female embryo (103 days),,dnase,0,heart
+537,b'ENCFF572BDN',DNASE:L1-S8R,,dnase,0,fibroblast
+538,b'ENCFF162WFN',DNASE:heart female embryo (116 days) and female embryo (98 days),,dnase,0,heart
+539,b'ENCFF747RHY',DNASE:MCF 10A treated with 1 uM tamoxifen for 24 hours,,dnase,0,epithelial cell
+540,b'ENCFF923TRG',DNASE:right renal pelvis male embryo (105 days),,dnase,0,renal
+541,b'ENCFF851IQY',DNASE:muscle of arm female embryo (98 days),,dnase,0,arm muscle
+542,b'ENCFF685WFL',DNASE:H9 G1 phase genetically modified using stable transfection,,dnase,0,stem cell
+543,b'ENCFF094FZF',DNASE:tibial nerve male adult (37 years),,dnase,0,tibial nerve
+544,b'ENCFF098CIC',DNASE:kidney male embryo (85 days),,dnase,0,kidney
+545,b'ENCFF645CDA',DNASE:tongue female embryo (59 days) and female embryo (76 days),,dnase,0,tongue
+546,b'ENCFF950KRY',DNASE:transverse colon female adult (51 year),,dnase,0,transverse colon
+547,b'ENCFF881JSN',DNASE:right renal pelvis male embryo (105 days),,dnase,0,renal
+548,b'ENCFF484MWV',DNASE:large intestine male embryo (91 day),,dnase,0,large intestine
+549,b'ENCFF712OII',DNASE:right kidney female embryo (117 days),,dnase,0,kidney
+550,b'ENCFF268XHZ',DNASE:right kidney male embryo (91 day),,dnase,0,kidney
+551,b'ENCFF375JUQ',DNASE:skin fibroblast male embryo (97 days),,dnase,0,skin
+552,b'ENCFF328BAN',DNASE:globus pallidus male adult (78 years) and male adult (84 years),,dnase,1,brain
+553,b'ENCFF518IQW',DNASE:kidney female embryo (105 days),,dnase,0,kindey
+554,b'ENCFF412KRU',DNASE:right atrium auricular region female adult (53 years),,dnase,0,heart
+555,b'ENCFF721IYP',DNASE:thymus female embryo (147 days),,dnase,0,thymus
+556,b'ENCFF017FGP',DNASE:stomach male adult (34 years),,dnase,0,stomach
+557,b'ENCFF540MDC',DNASE:eye embryo (56 days) and male embryo (76 days),,dnase,0,eye
+558,b'ENCFF376RIO',DNASE:esophagus squamous epithelium male adult (37 years),,dnase,0,esophagus
+559,b'ENCFF888PNL',DNASE:glomerular visceral epithelial cell child (3 years),,dnase,0,epithelial cel
+560,b'ENCFF167DZY',DNASE:muscle of back male embryo (127 days),,dnase,0,back muscle
+561,b'ENCFF072UOA',DNASE:spinal cord male embryo (96 days),,dnase,0,spinal cord male
+562,b'ENCFF222GDV',DNASE:MCF 10A,,dnase,0,"epithelial cell line, breast"
+563,b'ENCFF098CAJ',DNASE:transverse colon male adult (54 years),,dnase,0,transverse colon
+564,b'ENCFF419BLQ',DNASE:kidney embryo (59 days) and female embryo (59 days),,dnase,0,kidney
+565,b'ENCFF117WXM',DNASE:H1-hESC,,dnase,0,stem cell
+566,b'ENCFF112GQO',DNASE:large intestine female embryo (98 days),,dnase,0,large intestine
+567,b'ENCFF691QJR',DNASE:large intestine female embryo (103 days),,dnase,0,large intestine
+568,b'ENCFF804AOO',DNASE:placenta male embryo (85 days),,dnase,0,placenta
+569,b'ENCFF772ECZ',DNASE:left lung female embryo (91 day),,dnase,0,lung embryo
+570,b'ENCFF751LRX',DNASE:heart embryo (80 days),,dnase,0,heart
+571,b'ENCFF130BQK',DNASE:femur female embryo (98 days),,dnase,0,femur bone
+572,b'ENCFF345ALB',DNASE:H4,,dnase,0,neuroglioma
+573,b'ENCFF497YLT',DNASE:trophoblast cell embryo (23 weeks),,dnase,0,trophoblast
+574,b'ENCFF258PIV',DNASE:urinary bladder male embryo (76 days),,dnase,0,bladder
+575,b'ENCFF528SGI',DNASE:HT-29,,dnase,0,colorectal adenocarcinoma
+576,b'ENCFF540ITV',DNASE:limb embryo (53 days) and embryo (56 days),,dnase,0,limb
+577,b'ENCFF489DYU',DNASE:retina female embryo (89 days),,dnase,0,retina
+578,b'ENCFF867YFT',DNASE:dedifferentiated amniotic fluid mesenchymal stem cell,,dnase,0,stem cell
+579,b'ENCFF427FTE',DNASE:upper lobe of left lung female adult (53 years),,dnase,0,lung embryo
+580,b'ENCFF643ARA',DNASE:brain female embryo (105 days),,dnase,1,brain
+581,b'ENCFF924PVB',DNASE:muscle of arm embryo (101 day),,dnase,0,arm muscle
+582,b'ENCFF331URX',DNASE:renal cortex interstitium male embryo (108 days),,dnase,0,renal
+583,b'ENCFF210SQU',DNASE:pons male adult (78 years),,dnase,1,pons
+584,b'ENCFF353EKI',DNASE:thymus female embryo (105 days),,dnase,0,thymus
+585,b'ENCFF398WIV',"DNASE:CD8-positive, alpha-beta T cell female adult (33 years)",,dnase,0,t-cell
+586,b'ENCFF446JBL',DNASE:cardiac muscle cell,,dnase,0,heart
+587,b'ENCFF825SRM',"DNASE:CD8-positive, alpha-beta T cell male adult (21 year)",,dnase,0,t cell
+588,b'ENCFF800PMS',"DNASE:hematopoietic multipotent progenitor cell treated with interleukin-3 for 8 days, kit ligand for 8 days, hydrocortisone succinate for 8 days, erythropoietin for 8 days",,dnase,0,blood
+589,b'ENCFF520PUY',DNASE:right lung female embryo (117 days),,dnase,0,lung embryo
+590,b'ENCFF942LPA',DNASE:right lung male embryo (105 days),,dnase,0,lung embryo
+591,b'ENCFF609EGN',DNASE:lung female embryo (96 days),,dnase,0,lung embryo
+592,b'ENCFF415UET',DNASE:adrenal gland male adult (54 years),,dnase,0,adrenal
+593,b'ENCFF493QSG',DNASE:renal cortex interstitium male embryo (127 days),,dnase,0,renal
+594,b'ENCFF047HXB',DNASE:spleen male adult (54 years),,dnase,0,spleen
+595,b'ENCFF590MET',DNASE:renal cortex interstitium female embryo (89 days),,dnase,0,renal
+596,b'ENCFF233ORX',DNASE:ascending aorta female adult (51 year),,dnase,0,aorta
+597,b'ENCFF141YBL',DNASE:ovary female adult (51 year),,dnase,0,ovary
+598,b'ENCFF667COT',"DNASE:hematopoietic multipotent progenitor cell treated with interleukin-3 for 13 days, kit ligand for 13 days, hydrocortisone succinate for 13 days, erythropoietin for 13 days",,dnase,0,blood
+599,b'ENCFF626LYV',DNASE:cardiac fibroblast female embryo (94 days) and female embryo (98 days),,dnase,0,heart
+600,b'ENCFF378ZLF',DNASE:adrenal gland male embryo (85 days),,dnase,0,adrenal gland
+601,b'ENCFF443KCU',DNASE:large intestine male embryo (108 days),,dnase,0,large intestine
+602,b'ENCFF568EAH',DNASE:occipital lobe male adult (84 years),,dnase,1,brain
+603,b'ENCFF586GLK',DNASE:right lung female embryo (107 days),,dnase,0,lung embryo
+604,b'ENCFF374WLB',DNASE:small intestine female embryo (105 days),,dnase,0,small intestine
+605,b'ENCFF779SYM',DNASE:muscle of leg male embryo (104 days),,dnase,0,leg muscle
+606,b'ENCFF561DJM',DNASE:lower leg skin female adult (53 years),,dnase,0,skin
+607,b'ENCFF193WRL',DNASE:adrenal gland female adult (51 year),,dnase,0,adrenal
+608,b'ENCFF530PCA',DNASE:adrenal gland female embryo (85 days),,dnase,0,adrenal
+609,b'ENCFF170QVL',DNASE:muscle of arm male embryo (115 days),,dnase,0,arm muscle
+610,b'ENCFF200VXY',DNASE:right kidney female embryo (147 days),,dnase,0,kidney
+611,b'ENCFF248ZTQ',DNASE:kidney female embryo (76 days) and male embryo (76 days),,dnase,0,kidney
+612,b'ENCFF367ZCY',DNASE:large intestine female embryo (108 days),,dnase,0,large intestine
+613,b'ENCFF759AQQ',DNASE:right kidney female embryo (98 days),,dnase,0,kidney
+614,b'ENCFF596RFA',DNASE:right renal cortex interstitium male embryo (120 days),,dnase,0,renal 
+615,b'ENCFF259GAI',DNASE:muscle of arm male embryo (96 days),,dnase,0,arm muscle
+616,b'ENCFF350RPE',DNASE:thymus male embryo (108 days),,dnase,0,thymus male embryo
+617,b'ENCFF104EQW',DNASE:B cell female adult (34 years),,dnase,0,white blood cell
+618,b'ENCFF762FMJ',DNASE:thyroid gland male adult (54 years),,dnase,0,thyroid
+619,b'ENCFF370CZR',DNASE:spinal cord female embryo (59 days) and male embryo (72 days),,dnase,0,spinal cord female
+620,b'ENCFF326FWY',DNASE:heart embryo (96 days),,dnase,0,heart
+621,b'ENCFF734APY',DNASE:renal pelvis female embryo (89 days),,dnase,0,kindey
+622,b'ENCFF643GKF',DNASE:renal pelvis male embryo (108 days),,dnase,0,kidney
+623,b'ENCFF281GOQ',DNASE:heart female embryo (103 days),,dnase,0,heart
+624,b'ENCFF745RLH',DNASE:H9,,dnase,0,stem cell
+625,b'ENCFF971AHO',DNASE:K562,,dnase,0,lukemia
+626,b'ENCFF168UHZ',DNASE:left renal cortex interstitium male embryo (105 days),,dnase,0,kidney
+627,b'ENCFF499TWX',DNASE:right lung female embryo (108 days),,dnase,0,lung embryo
+628,b'ENCFF218SJO',DNASE:stomach female embryo (96 days),,dnase,0,stomach
+629,b'ENCFF619LIB',DNASE:small intestine male adult (34 years),,dnase,0,small intestine male
+630,b'ENCFF701FFX',DNASE:renal cortex interstitium female embryo (96 days),,dnase,0,kidney
+631,b'ENCFF385DEA',DNASE:A172,,dnase,0,glioblastoma
+632,b'ENCFF106TCU',DNASE:left lung male embryo (115 days),,dnase,0,lung embryo
+633,b'ENCFF198FAC',DNASE:muscle of leg male embryo (115 days),,dnase,0,leg muscle
+634,b'ENCFF907UIY',"DNASE:hematopoietic multipotent progenitor cell treated with interleukin-3 for 15 days, kit ligand for 15 days, hydrocortisone succinate for 15 days, erythropoietin for 15 days",,dnase,0,early stage blood cell
+635,b'ENCFF131DEL',DNASE:muscle of leg female embryo (115 days),,dnase,0,leg muscle
+636,b'ENCFF363RKM',DNASE:PC-9,,dnase,0,non-small cell lung cancer 
+637,b'ENCFF547ICI',DNASE:kidney female embryo (108 days),,dnase,0,kidney
+638,b'ENCFF047HGQ',DNASE:stomach embryo (101 day),,dnase,0,stomach
+639,b'ENCFF692AJS',DNASE:H9 G2 phase genetically modified using stable transfection,,dnase,0,stem cell
+640,b'ENCFF951HWM',DNASE:esophagus muscularis mucosa male adult (37 years),,dnase,0,esophagus
+641,b'ENCFF053FMQ',DNASE:small intestine male embryo (108 days),,dnase,0,small intestine male
+642,b'ENCFF791FRX',DNASE:heart left ventricle female embryo (101 day) and female embryo (103 days),,dnase,0,heart
+643,b'ENCFF461SNA',DNASE:SK-N-DZ,,dnase,0,neuroblastoma
+644,b'ENCFF622PZI',DNASE:brain male embryo (104 days),,dnase,1,brain male embryo
+645,b'ENCFF030GLD',DNASE:right lung male embryo (87 days),,dnase,0,lung embryo
+646,b'ENCFF293NBG',DNASE:muscle of arm male embryo (105 days),,dnase,0,arm muscle
+647,b'ENCFF778GKQ',DNASE:muscle of arm male embryo (104 days),,dnase,0,arm muscle
+648,b'ENCFF207ECZ',DNASE:kidney female embryo (105 days),,dnase,0,kidney embryo
+649,b'ENCFF459LFA',DNASE:left lung male embryo (105 days),,dnase,0,lung embryo
+650,b'ENCFF532VZC',DNASE:left kidney female embryo (107 days),,dnase,0,left kidney embryo
+651,b'ENCFF220BQY',DNASE:Peyer's patch male adult (37 years),,dnase,0,"peyer patch, lymphoid tissue in small intestine"
+652,b'ENCFF884QVN',DNASE:renal pelvis male embryo (113 days),,dnase,0,renal pelvis embryo
+653,b'ENCFF069GRI',DNASE:prostate gland male adult (37 years),,dnase,0,prostate 
+654,b'ENCFF977IGB',DNASE:HeLa-S3,,dnase,0,cervical cancer
+655,b'ENCFF609SYX',DNASE:left lung female embryo (110 days),,dnase,0,lung embryo
+656,b'ENCFF689ZKP',DNASE:thymus male embryo (104 days),,dnase,0,thymus male embryo
+657,b'ENCFF417MBH',DNASE:neural progenitor cell originated from H9,,dnase,0,neural progenitor cell
+658,b'ENCFF833HDX',DNASE:trophoblast cell embryo (39 weeks) and embryo (40 weeks),,dnase,0,trophoblast cell embryo (39 weeks) and embryo (40 weeks)
+659,b'ENCFF491HNC',DNASE:right lung male embryo (96 days),,dnase,0,lung embryo
+660,b'ENCFF091ZXC',DNASE:H9 G1 phase genetically modified using stable transfection,,dnase,0,H9 embryonic cell line
+661,b'ENCFF746JHF',DNASE:small intestine male embryo (87 days),,dnase,0,small intestine male
+662,b'ENCFF217JVN',DNASE:spinal cord female embryo (87 days),,dnase,0,spinal cord female
+663,b'ENCFF623DPF',DNASE:left kidney female embryo (110 days),,dnase,0,left kidney 
+664,b'ENCFF658GXI',DNASE:arm bone male embryo (81 day),,dnase,0,arm bone male
+665,b'ENCFF068YUS',DNASE:testis male adult (54 years),,dnase,0,testis male
+666,b'ENCFF624FJD',DNASE:transverse colon male adult (37 years),,dnase,0,transverse colon
+667,b'ENCFF630KCX',DNASE:right renal pelvis male embryo (105 days),,dnase,0,renal pelvis embryo
+668,b'ENCFF283WCF',DNASE:lung embryo (101 day),,dnase,0,lung embryo
+669,b'ENCFF848BGL',DNASE:inferior parietal cortex male adult (84 years),,dnase,1,inferior parietal cortex
+670,b'ENCFF403BFX',DNASE:kidney capillary endothelial cell female embryo (113 days),,dnase,0,kidney 
+671,b'ENCFF383SIU',DNASE:placenta male embryo (91 day),,dnase,0,placenta
+672,b'ENCFF253IUB',DNASE:right kidney male embryo (115 days),,dnase,0,kidney
+673,b'ENCFF871GME',DNASE:coronary artery female adult (51 year),,dnase,0,coronary artery
+674,b'GSM2543089',ATAC:BM0106-Day0-MCP-A / Bone Marrow CD34+ / pDC,,atac,0,bone marrow
+675,b'GSM2543090',ATAC:BM0106-UNK-ATAC-2 / Bone Marrow CD34+ / UNK,,atac,0,bone marrow
+676,b'GSM2543091',ATAC:BM0828-MEGA1-A-151109 / Bone Marrow CD34+ / Mega,,atac,0,bone marrow
+677,b'GSM2543093',ATAC:BM1077-MCP / Bone Marrow CD34+ / pDC,,atac,0,bone marrow
+678,b'GSM2543094',ATAC:BM1077-UNK / Bone Marrow CD34+ / UNK,,atac,0,bone marrow
+679,b'GSM2543095',ATAC:BM1137-GMP1-low-ATAC-2 / Bone Marrow CD34+ / GMP-A,,atac,0,bone marrow
+680,b'GSM2543096',ATAC:BM1137-GMP2-mid-ATAC-1 / Bone Marrow CD34+ / GMP-B,,atac,0,bone marrow
+681,b'GSM2543098',ATAC:BM1137-GMP3-high-ATAC-2 / Bone Marrow CD34+ / GMP-C,,atac,0,bone marrow
+682,b'GSM2543099',ATAC:BM1214-Day0-MCP / Bone Marrow CD34+ / pDC,,atac,0,bone marrow
+683,b'GSM2543100',ATAC:BM1214-Day0-UNK-A / Bone Marrow CD34+ / UNK,,atac,0,bone marrow

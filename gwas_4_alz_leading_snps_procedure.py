@@ -21,27 +21,34 @@ def merge_loci(df, distance_threshold=250000):
     
     while not df.empty:
         current = df.iloc[0]  # Take the first row
-        df = df.iloc[1:]  # Remove the first row from the dataframe
-        
+        #df = df.iloc[1:]
         # Find overlapping or nearby rows within the threshold
         overlapping_rows = df[
             (df['chr'] == current['chr']) &
             (df['left_border'] <= current['right_border'] + distance_threshold) &
             (df['right_border'] >= current['left_border'] - distance_threshold)
         ]
-        
+        #overlapping_rows = overlapping_rows._append(current)
         # If there are overlaps, merge them
         if not overlapping_rows.empty:
             # Update the current interval
+            
             print("overlaping rows", len(overlapping_rows))
             overlapping_rows = overlapping_rows.sort_values(['p'], ascending = True)
+            print(overlapping_rows.head())
 
             min_left_border = min(current['left_border'], overlapping_rows['left_border'].min())
             max_right_border = max(current['right_border'], overlapping_rows['right_border'].max())
             
-            # Get the row with the lowest p-value
-            min_p_row = overlapping_rows.loc[0]
             
+            # Get the row with the lowest p-value
+            min_p_row = overlapping_rows.loc[overlapping_rows['p'].idxmin()]
+            
+            print("current")
+            print(current)
+            print("min_p_row:")
+            print(min_p_row)
+
             # Create the merged interval
             merged_interval = {
                 'pos': min_p_row['pos'],
@@ -54,6 +61,7 @@ def merge_loci(df, distance_threshold=250000):
             
             # Remove the overlapping rows from the dataframe
             df = df.drop(overlapping_rows.index).reset_index(drop=True)
+
         else:
             # If no overlap, the current interval is finalized
             merged_interval = current.to_dict()
@@ -230,14 +238,25 @@ def main(directory_gwas_combined_files, sd):
         print(result_df.head())
         print(len(result_df))
 
-        result_df = result_df.sort_values(by=['chr', 'pos'])
-        result_df.to_csv(f"./gwas_4_alz_intermediate_files/result_df_sd={sd}.csv")
-        
-        merged_result_df = merge_loci(result_df)
+    result_df['p'] = result_df['p'].astype(float)
+
+    result_df = result_df.sort_values(by=['chr', 'pos'])
+    result_df.to_csv(f"./gwas_4_alz_intermediate_files/result_df_sd={sd}.csv")
+
+    result_df = pd.read_csv(f"./gwas_4_alz_intermediate_files/result_df_sd={sd}.csv")
+    
+    merged_result_df = merge_loci(result_df)
+    curr_len = len(merged_result_df)
+    while True:
         merged_result_df = merge_loci(merged_result_df)
+        new_len = len(merged_result_df)
+        if new_len - curr_len == 0:
+            break
+        else:
+            curr_len = new_len       
         
-        merged_result_df.to_csv(f'./gwas_4_alz_result_files/filtered_snps_sd={sd}.csv')
-        print("length of merged df " , len(merged_result_df))
+    merged_result_df.to_csv(f'./gwas_4_alz_result_files/filtered_snps_sd={sd}.csv')
+    print("length of merged df " , len(merged_result_df))
     
     ground_truth_snps = pd.read_csv('./gwas_4_alz_result_files/filtered_snps_sd=0.0.csv')
     clumped_results_with_merged_borders = merged_result_df.copy()
