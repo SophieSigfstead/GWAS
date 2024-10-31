@@ -29,7 +29,8 @@ Analysis of results of GWAS 1 analysis was completed using the following data:
 - FANTOM5_annotations (Data available in GWAS/FANTOM5_annotations)
 - PAINTOR
 
-- ### gwas 1 single track analysis: A seperate analysis was ran to understand the effects of a single SAD track being used as a threshold. The results of this are stored in GWAS/gwas_1_single_track_analysis/GWAS_1_leading_SNPs_by_track amd GWAS/gwas_1_single_track_analysis/GWAS_1_leading_snps_by_track_random. These results were produced using the GWAS/gwas_1_single_track_analysis/gwas_1_leading_SNPs_by_track.py file. The comparison notebook to all results is labelled GWAS/gwas_1_single_track_analysis/gwas_1_all_vs_single_track.ipynb and for  a random set of tracks in GWAS/gwas_1_single_track_analysis/gwas_1_all_vs_single_track_random.ipynb. A large-scale version of this analysis is currently underway. 
+- #### gwas 1 single track analysis:
+- A seperate analysis was ran to understand the effects of a single SAD track being used as a threshold. The results of this are stored in GWAS/gwas_1_single_track_analysis/GWAS_1_leading_SNPs_by_track amd GWAS/gwas_1_single_track_analysis/GWAS_1_leading_snps_by_track_random. These results were produced using the GWAS/gwas_1_single_track_analysis/gwas_1_leading_SNPs_by_track.py file. The comparison notebook to all results is labelled GWAS/gwas_1_single_track_analysis/gwas_1_all_vs_single_track.ipynb and for  a random set of tracks in GWAS/gwas_1_single_track_analysis/gwas_1_all_vs_single_track_random.ipynb. A large-scale version of this analysis is currently underway. 
 
 ### GWAS 2:
 - Original summary statistics are available in GWAS/gwas_1_and_2_summary_statistics_data/PGC_UKB_depression_genome-wide.txt
