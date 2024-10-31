@@ -7,12 +7,10 @@ The main protocol for each GWAS analysis is to:
 1. Identify an Enformer track list relevant to the trait being studied. Tracks are labelled according to tissue type in target_dnase_ataq_tracks_labelled.csv.
 
 2. Merge 1000 genomes SAD scores for each track in the track list with summary statistics for the given GWAS using a gwas_#_matching.py. These files match rows of summary statistics by either snp id (rs id) or chromosome and position pairs, depending on the information provided in the summary statistics. For gwas 1, this is called "gwas_1_matching.py". For gwas 3, this is called "gwas_3_scz_matching.py". For gwas 4, this is called "gwas_4_matching.py". 
-
 To replicate this in a new study: 
 The 1000 genomes SAD score data are stored in 1000genomes_as_csv. The summary statistics for your given study must be downloaded to the repository. Then, the SAD score data must be merged with the summary statistics on a common column depending on the variables in the summary stats (e.g. rs-id, [chr,pos]). 
 
 3. Replicate the given GWAS using a pre-filtered list of SNPs. These files are labelled gwas_#_leading_snps_procedure.py. These files first filter the SNPs based upon global thresholds for Enformer SAD track scores, and then adjust the p-value based upon the number of SNPs filtered from the given study. This is done with gwas_1_leading_snps_procedure.py for gwas 1, and gwas_3_scz_leading_snps_procedure.py for gwas 3, and gwas_4_alz_leading_snps_procedure.py for gwas 4.
-
 To replicate this in a new study, 1st apply GWAS filtering. This is done by computing global threshhold for Enformer SAD track scores across n_0 initial SNPs, then filtering the SNP list according to these thresholds. Compute the new number of SNPs (n_1) and multiply 5e-8 x (n_0/n_1). This will create a higher p-value threshold. Then recreate the GWAS selection process using methods outlined in the study using this new threshold for significance and filtered snp list. 
 
 4. Following the above steps, perform analyses of results compared to original study. 
